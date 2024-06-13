@@ -531,16 +531,14 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
                                                 </path>
                                             </svg>
                                             <ul class="location-list">
-                                                <li><a href="package-grid.html">Nepal</a></li>
-                                                <li><a href="package-grid.html">Indonesia Tour</a></li>
+                                                <li><a href="package-grid.html">{{$data->title}}</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="package-card-content">
                                     <div class="card-content-top">
-                                        <h5><a href="package-details.html">A Journey through Historical and
-                                                Culture.</a></h5>
+                                        <h5><a href="package-details.html">{{$package->package_title}}</a></h5>
                                         <div class="location-area">
                                             <ul class="location-list">
                                                 <li><a href="package-grid.html">Mecca</a></li>
