@@ -2,15 +2,16 @@
 
 @section('content')
     <div class="breadcrumb-section"
-        style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url(assets/img/innerpage/inner-banner-bg.png);">
+        style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url({{asset('assets/uploads/breadcrumb_imgs/' .$data->breadcrumb_img)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center">
                     <div class="banner-content">
-                        <h1>Package Details</h1>
+                        <h1>{{$data->destination->title}} Package {{$data->id}}</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Package Details</li>
+                            <li><a href="index.html" class="breadcrumb_link">Home</a></li>
+                            <li><a href="" class="nav-link">Packages</a></li>
+                            <li>{{$data->package_title}}</li>
                         </ul>
                     </div>
                 </div>
@@ -24,75 +25,42 @@
                 <div class="co-lg-12">
                     <div class="package-img-group mb-50">
                         <div class="row align-items-center g-3">
-                            <div class="col-lg-6">
-                                <div class="gallery-img-wrap">
-                                    <img src="assets/img/innerpage/package-01.jpg" alt="">
-                                    <a data-fancybox="gallery-01" href="assets/img/innerpage/package-01.jpg"><i
-                                            class="bi bi-eye"></i></a>
+                            @foreach (json_decode($data->images) as $index => $image)
+                                @if ($index ==0)
+                                <div class="col-lg-6">
+                                    <div class="gallery-img-wrap">
+                                        <img src="{{asset('assets/uploads/destination_imgs/' .$image)}}" alt="">
+                                        <a data-fancybox="gallery-01" href="{{asset('assets/img/innerpage/package-01.jpg')}}"><i
+                                                class="bi bi-eye"></i></a>
+                                    </div>
                                 </div>
-                            </div>
+                                @endif
+                            @endforeach
+                            
                             <div class="col-lg-6 h-100">
                                 <div class="row g-3 h-100">
-                                    <div class="col-6">
-                                        <div class="gallery-img-wrap">
-                                            <img src="assets/img/innerpage/package-02.jpg" alt="">
-                                            <a data-fancybox="gallery-01" href="assets/img/innerpage/package-02.jpg"><i
-                                                    class="bi bi-eye"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="gallery-img-wrap">
-                                            <img src="assets/img/innerpage/package-03.jpg" alt="">
-                                            <a data-fancybox="gallery-01" href="assets/img/innerpage/package-03.jpg"><i
-                                                    class="bi bi-eye"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="gallery-img-wrap active">
-                                            <img src="assets/img/innerpage/package-04.jpg" alt="">
-                                            <button class="StartSlideShowFirstImage"><i class="bi bi-plus-lg"></i> View
-                                                More Images</button>
-                                        </div>
-                                    </div>
-
-                                    <!-- tempalte section -->
-                                    <!-- <div class="col-6">
-                                    <div class="gallery-img-wrap active">
-                                        <img src="assets/img/innerpage/package-05.jpg" alt="">
-                                        <a data-fancybox="gallery-01"
-                                            href="https://www.youtube.com/watch?v=u31qwQUeGuM"><i
-                                                class="bi bi-play-circle"></i> Watch Video</a>
-                                    </div>
-                                </div> -->
-
-                                    <!-- Custom section -->
-                                    <div class="col-6">
-                                        <div id="weather-info" class="weather-box">
-                                        </div>
-                                    </div>
+                                    @foreach (json_decode($data->images) as $index => $iamge)
+                                        @if ($index != 0)
+                                            <div class="col-6">
+                                                <div class="gallery-img-wrap">
+                                                    <img src="{{asset('assets/uploads/destination_imgs/' .$image)}}" alt="">
+                                                    <a data-fancybox="gallery-01" href="{{asset('assets/img/innerpage/package-03.jpg')}}"><i
+                                                            class="bi bi-eye"></i></a>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="others-image-wrap d-none">
-                <a href="assets/img/innerpage/package-01.jpg" data-fancybox="images"><img
-                        src="assets/img/innerpage/blog-grid-img3.jpg" alt=""></a>
-                <a href="assets/img/innerpage/package-02.jpg" data-fancybox="images"><img
-                        src="assets/img/innerpage/blog-grid-img3.jpg" alt=""></a>
-                <a href="assets/img/innerpage/package-03.jpg" data-fancybox="images"><img
-                        src="assets/img/innerpage/blog-grid-img3.jpg" alt=""></a>
-                <a href="assets/img/innerpage/package-04.jpg" data-fancybox="images"><img
-                        src="assets/img/innerpage/blog-grid-img3.jpg" alt=""></a>
-                <a href="assets/img/innerpage/package-05.jpg" data-fancybox="images"><img
-                        src="assets/img/innerpage/blog-grid-img3.jpg" alt=""></a>
-            </div>
             <div class="row g-xl-4 gy-5">
                 <div class="col-xl-8">
-                    <h2>Experience the tour of excitement with the most adventurous activities.</h2>
+                    <h2>{{$data->package_title}}</h2>
                     <div class="tour-price">
-                        <h3>₹175/</h3><span>per person</span>
+                        <h3>₹{{$data->cost}}/</h3><span>per Couple</span>
                     </div>
                     <ul class="tour-info-metalist">
                         <li>
@@ -101,9 +69,9 @@
                                     d="M14 7C14 8.85652 13.2625 10.637 11.9497 11.9497C10.637 13.2625 8.85652 14 7 14C5.14348 14 3.36301 13.2625 2.05025 11.9497C0.737498 10.637 0 8.85652 0 7C0 5.14348 0.737498 3.36301 2.05025 2.05025C3.36301 0.737498 5.14348 0 7 0C8.85652 0 10.637 0.737498 11.9497 2.05025C13.2625 3.36301 14 5.14348 14 7ZM7 3.0625C7 2.94647 6.95391 2.83519 6.87186 2.75314C6.78981 2.67109 6.67853 2.625 6.5625 2.625C6.44647 2.625 6.33519 2.67109 6.25314 2.75314C6.17109 2.83519 6.125 2.94647 6.125 3.0625V7.875C6.12502 7.95212 6.14543 8.02785 6.18415 8.09454C6.22288 8.16123 6.27854 8.2165 6.3455 8.25475L9.408 10.0048C9.5085 10.0591 9.62626 10.0719 9.73611 10.0406C9.84596 10.0092 9.93919 9.93611 9.99587 9.83692C10.0525 9.73774 10.0682 9.62031 10.0394 9.50975C10.0107 9.39919 9.93982 9.30426 9.842 9.24525L7 7.62125V3.0625Z">
                                 </path>
                             </svg>
-                            4 Days / 5 Night
+                            {{$data->days}} Days / {{$data->nights}} Nights
                         </li>
-                        <li>
+                        {{-- <li>
                             <svg width="14" height="14" viewbox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7 7C7.92826 7 8.8185 6.63125 9.47487 5.97487C10.1313 5.3185 10.5 4.42826 10.5 3.5C10.5 2.57174 10.1313 1.6815 9.47487 1.02513C8.8185 0.368749 7.92826 0 7 0C6.07174 0 5.1815 0.368749 4.52513 1.02513C3.86875 1.6815 3.5 2.57174 3.5 3.5C3.5 4.42826 3.86875 5.3185 4.52513 5.97487C5.1815 6.63125 6.07174 7 7 7ZM14 12.8333C14 14 12.8333 14 12.8333 14H1.16667C1.16667 14 0 14 0 12.8333C0 11.6667 1.16667 8.16667 7 8.16667C12.8333 8.16667 14 11.6667 14 12.8333Z">
@@ -118,47 +86,9 @@
                                 </path>
                             </svg>
                             Kerala & Ooty
-                        </li>
+                        </li> --}}
                     </ul>
-                    <p>Tour and travel refer to the activities related to planning, organizing, and experiencing trips
-                        to various destinations for leisure, exploration, adventure, or relaxation.Choose your
-                        destination based on your interests and preferences, whether it's a cultural experience, a
-                        natural adventure, historical exploration, or a beach vacation.</p>
-                    <p>Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or
-                        even camping depending on your travel style and destination.Arrange transportation to and within
-                        your destination. This can include flights, trains, buses, rental cars, or even cruises.</p>
-                    <h4>Included and Excluded</h4>
-                    <div class="includ-and-exclud-area mb-20">
-                        <ul>
-                            <li><i class="bi bi-check-lg"></i> Meal as per hotel Plan and drinks free too.</li>
-                            <li><i class="bi bi-check-lg"></i> Return airport and round trip transfers.</li>
-                            <li><i class="bi bi-check-lg"></i> Accommodation on twin sharing basis.</li>
-                            <li><i class="bi bi-check-lg"></i> The above rates are on per day disposal basi</li>
-                            <li><i class="bi bi-check-lg"></i> Enjoy Brussels day tours. Overnight Brussels</li>
-                        </ul>
-                        <ul class="exclud">
-                            <li><i class="bi bi-x-lg"></i> AC will not be functional on Hills or Slopes.</li>
-                            <li><i class="bi bi-x-lg"></i> Any other service not mentioned</li>
-                            <li><i class="bi bi-x-lg"></i> Additional entry fees other than specified</li>
-                            <li><i class="bi bi-x-lg"></i> Amsterdam canal cruise not included for basic</li>
-                        </ul>
-                    </div>
-                    <div class="highlight-tour mb-20">
-                        <h4>Highlights of the Tour</h4>
-                        <ul>
-                            <li><span><i class="bi bi-check"></i></span> Our team of knowledgeable guides and travel
-                                experts are dedicated to making your journey memorable and worry-free</li>
-                            <li><span><i class="bi bi-check"></i></span> Dive into rich cultures and traditions. Explore
-                                historic sites, savor authentic cuisine, and connect with locals.</li>
-                            <li><span><i class="bi bi-check"></i></span> We take care of all the details, so you can
-                                focus on creating memories. Rest assured that your journey is in capable hands</li>
-                            <li><span><i class="bi bi-check"></i></span> Sip cocktails on the beach as you watch the sun
-                                dip below the horizon.</li>
-                            <li><span><i class="bi bi-check"></i></span> From accommodations to dining experiences, we
-                                select the best partners to ensure your comfort and enjoyment throughout your journey.
-                            </li>
-                        </ul>
-                    </div>
+                    {{!! $data->desc !!}}
                     <h4>Itinerary</h4>
                     <div class="accordion tour-plan" id="tourPlan">
                         <div class="accordion-item">

@@ -25,7 +25,7 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
             @foreach ($destinations as $destination)
             <div class="col-xl-3 col-lg-4 col-sm-6">
                 <div class="destination-card2">
-                    <a href="destination-details.html" class="destination-card-img"><img
+                    <a href="{{route('destination_details', ['id'=>$destination->id])}}" class="destination-card-img"><img
                             src="{{asset('assets/uploads/feature_imgs/' .$destination->feature_img)}}" alt=""></a>
                     {{-- <div class="batch">
                         <span>5 Tour</span>

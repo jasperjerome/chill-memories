@@ -15,6 +15,7 @@ Route::get('/', function () {
 // frontend routes
 Route::get('destinations', [FrontendController::class, 'destinations'])->name('destinations');
 Route::get('destination_details/{id}', [FrontendController::class, 'destination_details'])->name('destination_details');
+Route::get('package_details/{id}', [FrontendController::class, 'package_details'])->name('package_details');
 
 
 // destinations

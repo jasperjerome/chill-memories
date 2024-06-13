@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="breadcrumb-section"
-style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url(assets/img/innerpage/inner-banner-bg.png);">
+style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url({{asset('assets/uploads/breadcrumb_imgs/' .$data->breadcrumb_img)}});">
 <div class="container">
     <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
@@ -23,93 +23,26 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
 <div class="container">
     <div class="row g-lg-4 gy-5">
         <div class="col-lg-8">
-            <h2>Welcome To Egypt</h2>
-            <p>Egypt has one of the longest histories of any country, tracing its heritage along the Nile Delta
-                back to the 6th–4th millennia BCE. Considered a cradle of civilisation, Ancient Egypt saw some
-                of the earliest developments of writing, agriculture, urbanisation, organised religion and
-                central government.[15] Egypt's long and rich cultural heritage is an integral part of its
-                national identity, which reflects its unique transcontinental location being simultaneously
-                Mediterranean, Middle Eastern and North African.[16] Egypt was an early and important centre of
-                Christianity, but was largely Islamised in the seventh century. Modern Egypt dates back to 1922,
-                when it gained independence from the British Empire as a monarchy. Following the 1952
-                revolution, Egypt declared itself a republic, and in 1958 it merged with Syria to form the
-                United Arab Republic, which dissolved in 1961.</p>
+            <h2>Welcome To {{$data->title}}</h2>
+            <p>{{$data->desc}}</p>
             <div class="destination-gallery mb-40 mt-40">
                 <div class="row g-4">
+                    @foreach (json_decode($data->images) as $image)
                     <div class="col-lg-4 col-sm-6">
                         <div class="gallery-img-wrap">
-                            <img src="assets/img/innerpage/gallery-06.jpg" alt="">
-                            <a data-fancybox="gallery-01" href="assets/img/innerpage/gallery-06.jpg"><i
+                            <img src="{{asset('assets/uploads/destination_imgs/' .$image)}}" alt="">
+                            <a data-fancybox="gallery-01" href="{{asset('assets/uploads/destination_imgs/' .$image)}}"><i
                                     class="bi bi-eye"></i> Discover Island</a>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-sm-6">
-                        <div class="gallery-img-wrap">
-                            <img src="assets/img/innerpage/gallery-01.jpg" alt="">
-                            <a data-fancybox="gallery-01" href="assets/img/innerpage/gallery-01.jpg"><i
-                                    class="bi bi-eye"></i> Discover Island</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="gallery-img-wrap">
-                            <img src="assets/img/innerpage/gallery-02.jpg" alt="">
-                            <a data-fancybox="gallery-01" href="assets/img/innerpage/gallery-02.jpg"><i
-                                    class="bi bi-eye"></i> Discover Island</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="gallery-img-wrap">
-                            <img src="assets/img/innerpage/gallery-03.jpg" alt="">
-                            <a data-fancybox="gallery-01" href="assets/img/innerpage/gallery-03.jpg"><i
-                                    class="bi bi-eye"></i> Discover Island</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="gallery-img-wrap">
-                            <img src="assets/img/innerpage/gallery-04.jpg" alt="">
-                            <a data-fancybox="gallery-01" href="assets/img/innerpage/gallery-04.jpg"><i
-                                    class="bi bi-eye"></i> Discover Island</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-sm-6">
-                        <div class="gallery-img-wrap">
-                            <img src="assets/img/innerpage/gallery-05.jpg" alt="">
-                            <a data-fancybox="gallery-01" href="assets/img/innerpage/gallery-05.jpg"><i
-                                    class="bi bi-eye"></i> Discover Island</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
-            <h2>Heaven On Earth</h2>
-            <p>Egypt has one of the longest histories of any country, tracing its heritage along the Nile Delta
-                back to the 6th–4th millennia BCE. Considered a cradle of civilisation, Ancient Egypt saw some
-                of the earliest developments of writing, agriculture, urbanisation, organised religion and
-                central government.[15] Egypt's long and rich cultural heritage is an integral part of its
-                national</p>
-            <ul>
-                <li>Exploring ancient ruins, historical landmar.</li>
-                <li>Immersive cultural experiences, local.</li>
-                <li>Hiking, trekking, extreme sports, and out.</li>
-                <li>A romantic destination like Paris, Venice.</li>
-                <li>Kid-friendly activities, theme parks family.</li>
-                <li>Premium accommodations, gourmet.</li>
-            </ul>
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="destination-img">
-                        <img src="assets/img/innerpage/destination-img-01.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="destination-img">
-                        <img src="assets/img/innerpage/destination-img-02.jpg" alt="">
-                    </div>
-                </div>
-            </div>
+            {{!! $data->long_desc !!}}
         </div>
         <div class="col-lg-4">
             <div class="destination-sidebar">
-                <div class="destination-info mb-30">
+                <div class="destination-info mb-30 d-none">
                     <div class="single-info">
                         <span>Destination:</span>
                         <h5>Egypt</h5>
@@ -132,7 +65,7 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
                     </div>
                 </div>
                 <div class="banner2-card four">
-                    <img src="assets/img/home1/banner2-card-img2.png" alt="">
+                    <img src="{{asset('assets/img/home1/banner2-card-img2.png')}}" alt="">
                     <div class="banner2-content-wrap">
                         <div class="banner2-content">
                             <span>Savings worldwide</span>
@@ -148,7 +81,7 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
 </div>
 </div>
 
-<div class="destination-location-gallery mb-120">
+<div class="destination-location-gallery mb-120 d-none">
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
@@ -519,8 +452,8 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
                         <div class="swiper-slide">
                             <div class="package-card">
                                 <div class="package-card-img-wrap">
-                                    <a href="package-details.html" class="card-img"><img
-                                            src="assets/img/home1/package-card-img7.png" alt=""></a>
+                                    <a href="{{route('package_details', ['id'=>$package->id])}}" class="card-img"><img
+                                            src="{{asset('assets/uploads/feature_imgs/' .$package->feature_img)}}" alt=""></a>
                                     <div class="batch">
                                         <span class="date">{{$package->days}} Days / {{$package->nights}} Nights</span>
                                         <div class="location">
@@ -531,14 +464,14 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
                                                 </path>
                                             </svg>
                                             <ul class="location-list">
-                                                <li><a href="package-grid.html">{{$data->title}}</a></li>
+                                                <li><a href="{{route('destination_details', ['id'=>$data->id])}}">{{$data->title}}</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="package-card-content">
                                     <div class="card-content-top">
-                                        <h5><a href="package-details.html">{{$package->package_title}}</a></h5>
+                                        <h5><a href="{{route('package_details', ['id'=>$package->id])}}">{{$package->package_title}}</a></h5>
                                         {{-- <div class="location-area">
                                             <ul class="location-list">
                                                 <li><a href="package-grid.html">Mecca</a></li>

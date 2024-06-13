@@ -362,6 +362,7 @@
             </div>
         </div>
     </div> -->
+
     <header class="header-area style-1">
         <ul class="icon-list d-md-none">
             <li class="d-lg-flex d-none">
@@ -400,16 +401,16 @@
         </ul>
         <div class="header-logo d-lg-none d-flex">
             <a href="index.html"><img alt="image" class="img-fluid"
-                    src="assets/img/chill-memories-logo.jpeg"></a>
+                    src="{{asset('assets/img/chill-memories-logo.jpeg')}}"></a>
         </div>
         <div class="company-logo d-lg-flex d-none">
-            <a href="index.html"><img src="assets/img/chill-memories-logo.jpeg" style="width: 200px;"
+            <a href="index.html"><img src="{{asset('assets/img/chill-memories-logo.jpeg')}}" style="width: 200px;"
                     alt=""></a>
         </div>
         <div class="main-menu">
             <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                 <div class="mobile-logo-wrap">
-                    <a href="index.html"><img alt="image" src="assets/img/chill-memories-logo.jpeg"></a>
+                    <a href="index.html"><img alt="image" src="{{asset('assets/img/chill-memories-logo.jpeg')}}"></a>
                 </div>
                 <div class="menu-close-btn">
                     <i class="bi bi-x"></i>
@@ -423,7 +424,7 @@
                     <a href="package-details.html" class="drop-down">Package</a>
                 </li>
                 <li>
-                    <a href="destination-details.html" class="drop-down">Destination</a>
+                    <a href="{{route('destinations')}}" class="drop-down">Destination</a>
                 </li>
                 <li>
                     <a href="about.html" class="drop-down">About</a>
