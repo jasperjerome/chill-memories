@@ -539,7 +539,7 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
                                 <div class="package-card-content">
                                     <div class="card-content-top">
                                         <h5><a href="package-details.html">{{$package->package_title}}</a></h5>
-                                        <div class="location-area">
+                                        {{-- <div class="location-area">
                                             <ul class="location-list">
                                                 <li><a href="package-grid.html">Mecca</a></li>
                                                 <li><a href="package-grid.html">Medina</a></li>
@@ -548,12 +548,12 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
                                                 <li><a href="package-grid.html">Al Wakrah</a></li>
                                                 <li><a href="package-grid.html">Al Rayyan</a></li>
                                             </ul>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <div class="card-content-bottom">
                                         <div class="price-area">
                                             <h6>Starting Form:</h6>
-                                            <span>$8,629</span>
+                                            <span>{{$package->cost}}</span>
                                             <p>TAXES INCL/PERS</p>
                                         </div>
                                         <a href="package-details.html" class="primary-btn2">Book a Trip
