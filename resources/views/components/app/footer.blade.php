@@ -10,6 +10,16 @@
     </ul>
 </div>
 
+
+@if (\Session::has('create'))
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+@elseif (\Session::has('update'))
 <div class="toast-container position-fixed top-0 end-0 p-3">
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-body">
@@ -17,3 +27,12 @@
         </div>
     </div>
 </div>
+@elseif (\Session::has('delete'))
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+</div>
+@endif

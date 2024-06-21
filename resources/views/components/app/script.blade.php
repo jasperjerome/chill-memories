@@ -33,3 +33,15 @@
 
 
     <script src="{{asset('assets/js/custom.js')}}"></script>
+
+    <script>
+        ///////////////////////toast script
+    document.addEventListener('DOMContentLoaded', function() {
+        var toastElement = document.getElementById('liveToast');
+        var toast = new bootstrap.Toast(toastElement);
+        toast.show();
+        setTimeout(function() {
+            toast.hide();
+        }, 2000);
+    });
+    </script>
