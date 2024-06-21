@@ -23,7 +23,7 @@ class Destination extends Model
     ];
 
     public function packages() {
-        return $this->hasMany(Package::class);
+        return $this->hasMany(Package::class, 'destination_id');
     }
 
     public function itinerary() {

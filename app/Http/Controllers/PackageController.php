@@ -13,7 +13,9 @@ class PackageController extends Controller
      */
     public function index()
     {
-        return view('pages.backend.packages.index');
+        $data = Package::with('destination')->get();
+        // return $data;
+        return view('pages.backend.packages.index', compact('data'));
     }
 
     /**

@@ -23,6 +23,6 @@ class Package extends Model
     ];
 
     public function destination() {
-        return $this->belongsTo(Destination::class);
+        return $this->belongsTo(Destination::class, 'destination_id');
     }
 }
