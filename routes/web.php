@@ -13,6 +13,7 @@ Route::get('/', function () {
 
 
 // frontend routes
+Route::get('fe_home', [FrontendController::class, 'index'])->name('fe_home');
 Route::get('destinations', [FrontendController::class, 'destinations'])->name('destinations');
 Route::get('destination_details/{id}', [FrontendController::class, 'destination_details'])->name('destination_details');
 Route::get('package_details/{id}', [FrontendController::class, 'package_details'])->name('package_details');
@@ -32,6 +33,7 @@ Route::post('app/packages/store', [PackageController::class, 'store'])->name('ap
 Route::get('app/itinerary', [ItineraryController::class, 'index'])->name('app.itinerary');
 Route::get('app/itinerary/create', [ItineraryController::class, 'create'])->name('app.itinerary.create');
 Route::post('app/itinerary/store', [ItineraryController::class, 'store'])->name('app.itinerary.store');
+Route::get('app/getItineraryByDestination/{id}', [ItineraryController::class, 'getItineraryByDestination'])->name('app.getItineraryByDestination');
 
 // as post
 Route::get('app/ad', [AdController::class, 'index'])->name('app.ad');

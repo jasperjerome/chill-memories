@@ -25,4 +25,8 @@ class Package extends Model
     public function destination() {
         return $this->belongsTo(Destination::class, 'destination_id');
     }
+
+    public function itineraries() {
+        return $this->belongsToMany(Itinerary::class);
+    }
 }

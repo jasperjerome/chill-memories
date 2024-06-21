@@ -13,7 +13,9 @@ class ItineraryController extends Controller
      */
     public function index()
     {
+        $data = Itinerary::with('destination')->get();
 
+        return view('pages.backend.itinerary.index', compact('data'));
     }
 
     /**
@@ -71,5 +73,10 @@ class ItineraryController extends Controller
     public function destroy(Itinerary $itinerary)
     {
         //
+    }
+
+    public function getItineraryByDestination($id) {
+        $itineraries = Itinerary::where('destination_id', $id)->get();
+        return response()->json($itineraries);
     }
 }

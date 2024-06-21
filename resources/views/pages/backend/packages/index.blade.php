@@ -6,7 +6,7 @@
         <div class="col-xl-12">
             <div class="main-content-title-profile mb-50">
                 <div class="main-content-title">
-                    <h3>All Destinations</h3>
+                    <h3>All Packages</h3>
                 </div>
                 <div class="profile">
                     <a href="#">
@@ -116,7 +116,7 @@
             <div class="recent-listing-area">
                 <div class="title-and-tab">
                     <h6 class="opacity-0">Tour Package Info</h6>
-                    <a href="{{route('app.destinations.create')}}" class="primary-btn3">Create New</a>
+                    <a href="{{route('app.packages.create')}}" class="primary-btn3">Create New</a>
                     <div class="search-area d-none">
                         <form>
                             <div class="search-box">
@@ -148,54 +148,21 @@
                                     {{-- <td>{{$data->destination_id}}</td> --}}
                                     <td>{{$datas->package_title}}</td>
                                     <td>{{$datas->cost}}</td>
-                                    <td><img src="{{asset('assets/uploads/breadcrumb_imgs/' .$datas->breadcrumb_img)}}" alt="" class="img-fluid"></td>
-                                    <td><img src="{{asset('assets/uploads/feature_imgs/' .$datas->feature_img)}}" alt="" class="img-fluid"></td>
+                                    <td><img src="{{asset('assets/uploads/breadcrumb_imgs/' .$datas->breadcrumb_img)}}" alt="" style="height: 100px"></td>
+                                    <td><img src="{{asset('assets/uploads/feature_imgs/' .$datas->feature_img)}}" alt="" style="height: 100px"></td>
                                     <td>{{$datas->created_at}}</td>
                                     <td>
-                                            <ul>
-                                                <li class="nav-item"><a href="" class="nav-link"> <i class="fas fa-trash"></i> </a></li>
-                                                <li class="nav-item"><a href="" class="nav-link"> <i class="fas fa-pencil-alt"></i> </a></li>
-                                                <li class="nav-item"><a href="" class="nav-link"> <i class="fa fa-eye"></i> </a></li>
-                                            </ul>
+                                        <ul class="d-flex align-items-center action-btns">
+                                            <li class="nav-item mx-2"><a href="" class="nav-link"> <i class="fas fa-trash"></i> </a></li>
+                                            <li class="nav-item mx-2"><a href="" class="nav-link"> <i class="fas fa-pencil-alt"></i> </a></li>
+                                            <li class="nav-item mx-2"><a href="" class="nav-link"> <i class="fa fa-eye"></i> </a></li>
+                                        </ul>
                                     </td>
                                 </tr>
                                 @endforeach
                             @endif
                         </tbody>
                     </table>
-                    <div class="pagination-area">
-                        <ul class="paginations">
-                            <li class="page-item active">
-                                <a href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#">3</a>
-                            </li>
-                        </ul>
-                        <ul class="paginations-buttons">
-                            <li>
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14"
-                                        viewbox="0 0 7 14">
-                                        <path d="M0 7.00008L7 0L2.54545 7.00008L7 14L0 7.00008Z"></path>
-                                    </svg>
-                                    Prev
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Next
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14"
-                                        viewbox="0 0 7 14" fill="none">
-                                        <path d="M7 7.00008L0 0L4.45455 7.00008L0 14L7 7.00008Z"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>

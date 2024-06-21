@@ -91,103 +91,22 @@
                     {{!! $data->desc !!}}
                     <h4>Itinerary</h4>
                     <div class="accordion tour-plan" id="tourPlan">
+                        @foreach ($itineraries as $index => $itinerary)
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
+                            <h2 class="accordion-header" id="heading{{$itinerary->id}}">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <span>Day 01 :</span> Departure
+                                    data-bs-target="#collapse_{{$itinerary->id}}" aria-expanded="true" aria-controls="collapse{{$itinerary->id}}">
+                                    <span>Day 0{{$index+1}} :</span> {{$itinerary->title}}
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            <div id="collapse_{{$itinerary->id}}" class="accordion-collapse collapse" aria-labelledby="heading{{$itinerary->id}}"
                                 data-bs-parent="#tourPlan">
                                 <div class="accordion-body">
-                                    <p>Arrive Cairo airport, welcome greeting by our representative who will assist you
-                                        and provide tra nsfers to your Hotel in Cairo. (the clients will inform us about
-                                        their arrival time minimum 7 days before)</p>
-                                    <ul>
-                                        <li><i class="bi bi-check-lg"></i> Admire Big Ben, Buckingham Palace and St
-                                            Paul’s Cathedral</li>
-                                        <li><i class="bi bi-check-lg"></i> Chance to spot prominent landmarks of the
-                                            city</li>
-                                    </ul>
+                                    {{!! $itinerary->desc !!}}
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <span>Day 02 :</span> Adventure Beggins
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#tourPlan">
-                                <div class="accordion-body">
-                                    <p>Arrive Cairo airport, welcome greeting by our representative who will assist you
-                                        and provide tra nsfers to your Hotel in Cairo. (the clients will inform us about
-                                        their arrival time minimum 7 days before)</p>
-                                    <ul>
-                                        <li><i class="bi bi-check-lg"></i> Admire Big Ben, Buckingham Palace and St
-                                            Paul’s Cathedral</li>
-                                        <li><i class="bi bi-check-lg"></i> Chance to spot prominent landmarks of the
-                                            city</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <span>Day 03 :</span> Historical Tour
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#tourPlan">
-                                <div class="accordion-body">
-                                    <p>Arrive Cairo airport, welcome greeting by our representative who will assist you
-                                        and provide tra nsfers to your Hotel in Cairo. (the clients will inform us about
-                                        their arrival time minimum 7 days before)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <span>Day 04 :</span> Rest & Tour
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#tourPlan">
-                                <div class="accordion-body">
-                                    <p>Please go to the London Eye ticket office to exchange your voucher for a ticket.
-                                        You may be ask ed for identification (driver's license, national identity card
-                                        or passport). You will receive tickets for the next available time slot, but you
-                                        may request a different date or time, subject to availability.</p>
-                                    <p>The following items are not permitted: alcohol, baseball bats, bicycles
-                                        (including folding ones), explosives For all ticket holders, the number of
-                                        people per capsule may vary.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    <span>Day 05 :</span> Return
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#tourPlan">
-                                <div class="accordion-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="tour-location">
                         <h4>Location Map</h4>

@@ -126,7 +126,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="recent-listing-table">
+                <div class="recent-listing-table table-responsive">
                     <table class="eg-table2">
                         <thead>
                             <tr>
@@ -142,56 +142,23 @@
                             @if ($data->count())
                                 @foreach ($data as $index => $datas)
                                 <tr>
-                                    <td>{{$index+1}} <a href="{{route('destination_details', ['id'=>$datas->id])}}">link</a></td>
-                                    <td>{{$datas->title}}</td>
+                                    <td>{{$index+1}}</td>
+                                    <td><a href="{{route('destination_details', ['id'=>$datas->id])}}" class="nav-link">{{$datas->title}}</a></td>
                                     <td>{{$datas->wheather}}</td>
                                     <td>{{$datas->desc}}</td>
                                     <td>{{$datas->created_at}}</td>
                                     <td>
-                                            <ul>
-                                                <li class="nav-item"><a href="" class="nav-link"> <i class="fas fa-trash"></i> </a></li>
-                                                <li class="nav-item"><a href="" class="nav-link"> <i class="fas fa-pencil-alt"></i> </a></li>
-                                                <li class="nav-item"><a href="" class="nav-link"> <i class="fa fa-eye"></i> </a></li>
-                                            </ul>
+                                        <ul class="d-flex align-items-center action-btns">
+                                            <li class="nav-item mx-2"><a href="" class="nav-link"> <i class="fas fa-trash"></i> </a></li>
+                                            <li class="nav-item mx-2"><a href="" class="nav-link"> <i class="fas fa-pencil-alt"></i> </a></li>
+                                            <li class="nav-item mx-2"><a href="" class="nav-link"> <i class="fa fa-eye"></i> </a></li>
+                                        </ul>
                                     </td>
                                 </tr>
                                 @endforeach
                             @endif
                         </tbody>
                     </table>
-                    <div class="pagination-area">
-                        <ul class="paginations">
-                            <li class="page-item active">
-                                <a href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#">3</a>
-                            </li>
-                        </ul>
-                        <ul class="paginations-buttons">
-                            <li>
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14"
-                                        viewbox="0 0 7 14">
-                                        <path d="M0 7.00008L7 0L2.54545 7.00008L7 14L0 7.00008Z"></path>
-                                    </svg>
-                                    Prev
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Next
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14"
-                                        viewbox="0 0 7 14" fill="none">
-                                        <path d="M7 7.00008L0 0L4.45455 7.00008L0 14L7 7.00008Z"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destination;
+use App\Models\Itinerary;
 use App\Models\Package;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class PackageController extends Controller
     public function index()
     {
         $data = Package::with('destination')->get();
-        // return $data;
+        // return $itineraries;
         return view('pages.backend.packages.index', compact('data'));
     }
 
@@ -24,7 +25,8 @@ class PackageController extends Controller
     public function create()
     {
         $destinations = Destination::get();
-        return view('pages.backend.packages.create', compact('destinations'));
+        $itineraries = Itinerary::with('destination')->get();
+        return view('pages.backend.packages.create', compact('destinations', 'itineraries'));
     }
 
     /**
@@ -39,9 +41,10 @@ class PackageController extends Controller
         $data->cost = $request->get('cost');
         $data->days = $request->get('days');
         $data->nights = $request->get('nights');
-        $data->itinerary = 'default';
         $data->desc = $request->get('desc');
-
+         $itinerary = json_encode($request->input('itinerary'));
+         $data->itinerary = $itinerary;
+         
         // feature image
         if ($request->hasFile('feature_img')) {
             $feature_img = $request->file('feature_img');
@@ -75,7 +78,7 @@ class PackageController extends Controller
 
         $data->save();
 
-    return redirect()->route('app.packages')->with('create', 'Package Created Successfully');
+        return redirect()->route('app.packages')->with('create', 'Package Created Successfully');
 
     }
 

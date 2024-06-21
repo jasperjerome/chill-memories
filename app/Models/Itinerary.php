@@ -18,4 +18,5 @@ class Itinerary extends Model
     public function destination() {
         return $this->belongsTo(Destination::class);
     }
+    
 }

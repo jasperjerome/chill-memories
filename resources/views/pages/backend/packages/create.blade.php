@@ -96,6 +96,25 @@
                                     <input type="file" class="form-control" name="images[]" multiple>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="main-content-title-profile mt-50 mb-20">
+                                    <div class="main-content-title">
+                                        <h3>Add Itinerary</h3>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td>No.</td>
+                                                <td>Itinerary Title</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="itineraries">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-inner d-flex justify-content-end">
                             <button type="submit" class="primary-btn3">Save</button>
@@ -120,5 +139,33 @@
 		.catch( err => {
 			console.error( err.stack );
 		} );
+
+
+        // ajax to retrive the itineraries associated with the selected destinations
+        $(document).ready(function() {
+            $('#destination_id').change(function() {
+                var destinationId = $(this).val();
+                
+                if (destinationId) {
+                    $.ajax({
+                        url: '/app/getItineraryByDestination/' + destinationId,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function(data) {
+                            $('#itineraries').empty();
+                            $.each(data, function(key, value) {
+                        // $('#itineraries').append('<option value="'+ value.id +'">'+ value.title +'</option>');
+                        $('#itineraries').append('<tr>' +
+                            '<td><input type="checkbox" name="itinerary[]" value='+value.id+' /></td>' + 
+                            '<td>'+value.title+'</td>' + 
+                            '</tr>')
+                    });
+                        }
+                    })
+                } else {
+                    
+                }
+            })
+        })
 </script>
 @endsection

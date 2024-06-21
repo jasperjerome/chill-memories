@@ -418,7 +418,7 @@
             </div>
             <ul class="menu-list">
                 <li>
-                    <a href="index.html" class="drop-down">Home</a>
+                    <a href="{{route('fe_home')}}" class="drop-down">Home</a>
                 </li>
                 <li>
                     <a href="package-details.html" class="drop-down">Package</a>
