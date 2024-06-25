@@ -57,14 +57,16 @@ class DestinationController extends Controller
         $images = $request->file('images');
         $imagePaths = [];
 
-        // destination images
-        foreach ($images as $image) {
-        $filename = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
-        $image->move('assets/uploads/destination_imgs', $filename);
-        // Save the filename to the array
-        $imagePaths[] = $filename;
+        if ($request->images) {
+            // destination images
+            foreach ($images as $image) {
+                $filename = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move('assets/uploads/destination_imgs', $filename);
+                // Save the filename to the array
+                $imagePaths[] = $filename;
+            }
         }
-    
+
 
         // Convert the image paths array to JSON
         $imagePathsJson = json_encode($imagePaths);
@@ -72,7 +74,7 @@ class DestinationController extends Controller
 
         $data->save();
 
-    return redirect()->route('app.destinations')->with('create', 'Destination Created Successfully');
+        return redirect()->route('app.destinations')->with('create', 'Destination Created Successfully');
     }
 
     /**

@@ -6,26 +6,40 @@ use App\Models\Destination;
 use App\Models\Itinerary;
 use App\Models\Package;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class FrontendController extends Controller
 {
 
-    public function index() {
+    public function index()
+    {
         return view('pages.frontend.index');
     }
 
-    public function destinations() {
+    public function destinations()
+    {
         $destinations = Destination::get();
 
         return view('pages.frontend.destination', compact('destinations'));
     }
 
-    public function destination_details($id) {
+    public function destination_details($id)
+    {
         $data = Destination::with('packages')->findOrFail($id);
-        return view('pages.frontend.destination_details', compact('data'));
+        $apiKey = env('WEATHER_API_KEY');
+        $apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" . $data->title . "&appid=" . $apiKey;
+
+        $response = Http::get($apiUrl);
+        if ($response->successful()) {
+            $weather = json_decode($response, true); // remove json_decode function if needed
+        } else {
+            $weather = 'Check Your Network Connection';
+        }
+        return view('pages.frontend.destination_details', compact('data', 'weather'));
     }
 
-    public function package_details($id) {
+    public function package_details($id)
+    {
         $data = Package::with(['destination'])->findOrFail($id);
 
         $itineraryIds = json_decode($data->itinerary);

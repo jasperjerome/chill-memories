@@ -9,8 +9,8 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
             <div class="banner-content">
                 <h1>{{$data->title}}</h1>
                 <ul class="breadcrumb-list">
-                    <li><a href="index.html" class="breadcrumb_link">Home</a></li>
-                    <li><a href="index.html" class="nav-link">Destinations</a></li>
+                    <li><a href="{{route('fe_home')}}" class="breadcrumb_link">Home</a></li>
+                    <li><a href="{{route('destinations')}}" class="nav-link">Destinations</a></li>
                     <li>{{$data->title}}</li>
                 </ul>
             </div>

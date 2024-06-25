@@ -91,6 +91,7 @@
                     {{!! $data->desc !!}}
                     <h4>Itinerary</h4>
                     <div class="accordion tour-plan" id="tourPlan">
+                        @if ($itineraries->count())
                         @foreach ($itineraries as $index => $itinerary)
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading{{$itinerary->id}}">
@@ -107,8 +108,9 @@
                             </div>
                         </div>
                         @endforeach
+                        @endif
                     </div>
-                    <div class="tour-location">
+                    <div class="tour-location d-none">
                         <h4>Location Map</h4>
                         <div class="map-area mb-30">
                             <iframe
@@ -654,51 +656,13 @@
                                 aria-controls="v-pills-contact" aria-selected="false">Inquiry Form</button>
                         </div>
                         <div class="tab-content" id="v-pills-tabContent2">
-                            <div class="tab-pane fade" id="v-pills-booking" role="tabpanel"
+                            <div class="tab-pane fade show active" id="v-pills-booking" role="tabpanel"
                                 aria-labelledby="v-pills-booking-tab">
                                 <div class="sidebar-booking-form">
                                     <form method="post" action="">
                                         <div class="tour-date-wrap mb-50">
                                             <h6>Select Your Booking Date:</h6>
-                                            <div class="form-check mb-25">
-                                                <input class="form-check-input" type="radio" name="tourDate"
-                                                    id="checkIn" value="option1" checked="">
-                                                <label class="form-check-label" for="checkIn">
-                                                    <span class="tour-date">
-                                                        <span class="start-date">
-                                                            <span>Check In</span>
-                                                            <span> Jan 1, 2024 </span>
-                                                        </span>
-                                                        <i class="bi bi-arrow-right"></i>
-                                                        <span class="end-date text-end">
-                                                            <span>Check Out</span>
-                                                            <span>Jan 5, 2024</span>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="form-check mb-25">
-                                                <input class="form-check-input" type="radio" name="tourDate"
-                                                    id="checkOut" value="option2">
-                                                <label class="form-check-label" for="checkOut">
-                                                    <span class="tour-date">
-                                                        <span class="start-date">
-                                                            <span>Check In</span>
-                                                            <span> Jan 10, 2024 </span>
-                                                        </span>
-                                                        <i class="bi bi-arrow-right"></i>
-                                                        <span class="end-date text-end">
-                                                            <span>Check Out</span>
-                                                            <span>Jan 15, 2024</span>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
                                             <div class="form-check customdate">
-                                                <input class="form-check-input" type="radio" name="tourDate"
-                                                    id="Coustom" value="option1" checked="">
-                                                <label class="form-check-label" for="Coustom">
-                                                </label>
                                                 <span class="form-group">
                                                     <input type="text" readonly="" name="daterange"
                                                         placeholder="5 Jan, 2024">
@@ -743,7 +707,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="booking-form-item-type">
+                                        <div class="booking-form-item-type">
                                         <h5>Other Extra Services</h5>
                                         <div class="checkbox-container">
                                             <label class="check-container">Home Pickup
@@ -765,8 +729,8 @@
                                                 <span class="price">₹20 </span>
                                             </label>
                                         </div>
-                                    </div> -->
-                                        <!-- <div class="booking-form-item-type">
+                                    </div>
+                                        <div class="booking-form-item-type">
                                         <div class="single-total mb-30">
                                             <span>Adult</span>
                                             <ul>
@@ -801,13 +765,13 @@
                                             </svg>
                                             <div class="total">₹390</div>
                                         </div>
-                                    </div> -->
+                                    </div>
                                         <div class="total-price"><span>Total Price:</span> ₹470</div>
-                                        <button type="submit" class="primary-btn1 two">Book Now</button>
+                                        <button type="submit" class="primary-btn1 two mb-70">Book Now</button>
                                     </form>
                                 </div>
                             </div>
-                            <div class="tab-pane fade show active" id="v-pills-contact" role="tabpanel"
+                            <div class="tab-pane fade" id="v-pills-contact" role="tabpanel"
                                 aria-labelledby="v-pills-contact-tab">
                                 <div class="sidebar-booking-form">
                                     <form>
@@ -827,7 +791,7 @@
                                             <label>Destination <span>*</span></label>
                                             <input type="text" placeholder="Enter your Destination">
                                         </div>
-                                        <div class="form-inner">
+                                        <div class="form-inner mb-60">
                                             <button type="submit" class="primary-btn1 two">Submit Now</button>
                                         </div>
                                     </form>
