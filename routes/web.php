@@ -16,6 +16,7 @@ Route::get('/', function () {
 Route::get('fe_home', [FrontendController::class, 'index'])->name('fe_home');
 Route::get('destinations', [FrontendController::class, 'destinations'])->name('destinations');
 Route::get('destination_details/{id}', [FrontendController::class, 'destination_details'])->name('destination_details');
+Route::get('packages', [FrontendController::class, 'packages'])->name('packages');
 Route::get('package_details/{id}', [FrontendController::class, 'package_details'])->name('package_details');
 
 

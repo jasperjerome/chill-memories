@@ -38,6 +38,10 @@ class FrontendController extends Controller
         return view('pages.frontend.destination_details', compact('data', 'weather'));
     }
 
+    public function packages() {
+        $packages = Package::with('destination')->get();
+        return view('pages.frontend.packages', compact('packages'));
+    }
     public function package_details($id)
     {
         $data = Package::with(['destination'])->findOrFail($id);
