@@ -774,22 +774,23 @@
                             <div class="tab-pane fade" id="v-pills-contact" role="tabpanel"
                                 aria-labelledby="v-pills-contact-tab">
                                 <div class="sidebar-booking-form">
-                                    <form action="" method="post">
+                                    <form action="{{route('enquiry_email')}}" method="post">
+                                        @csrf
                                         <div class="form-inner mb-20">
                                             <label>Full Name <span>*</span></label>
-                                            <input type="text" placeholder="Enter your full name">
+                                            <input type="text" name="name" placeholder="Enter your full name">
                                         </div>
                                         <div class="form-inner mb-20">
                                             <label>Email Address <span>*</span></label>
-                                            <input type="email" placeholder="Enter your email address">
+                                            <input type="email" name="email" placeholder="Enter your email address">
                                         </div>
                                         <div class="form-inner mb-20">
                                             <label>Phone Number <span>*</span></label>
-                                            <input type="text" placeholder="Enter your phone number">
+                                            <input type="text" name="mobile" placeholder="Enter your phone number">
                                         </div>
                                         <div class="form-inner mb-30">
                                             <label>Destination <span>*</span></label>
-                                            <input type="text" placeholder="Enter your Destination">
+                                            <input type="text" name="destination" placeholder="Enter your Destination">
                                         </div>
                                         <div class="form-inner mb-60">
                                             <button type="submit" class="primary-btn1 two">Submit Now</button>

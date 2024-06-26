@@ -16,9 +16,10 @@ class EnquiryAdminMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $details;
+    public function __construct($details)
     {
-        //
+        $this->details = $details;
     }
 
     /**
@@ -27,7 +28,7 @@ class EnquiryAdminMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Enquiry Admin Mail',
+            subject: 'New Enquiry recievied',
         );
     }
 
@@ -37,7 +38,8 @@ class EnquiryAdminMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.enquiry_admin_mail',
+            with: ['details' => $this->details],
         );
     }
 

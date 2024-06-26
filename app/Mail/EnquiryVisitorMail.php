@@ -20,7 +20,7 @@ class EnquiryVisitorMail extends Mailable
 
     public function __construct($details)
     {
-        $this->$details = $details;
+        $this->details = $details;
     }
 
     /**
@@ -39,7 +39,8 @@ class EnquiryVisitorMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.enquiry_visitor_mail',
+            with: ['details' => $this->details],
         );
     }
 

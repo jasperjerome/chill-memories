@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\PackageController;
@@ -18,6 +19,7 @@ Route::get('destinations', [FrontendController::class, 'destinations'])->name('d
 Route::get('destination_details/{id}', [FrontendController::class, 'destination_details'])->name('destination_details');
 Route::get('packages', [FrontendController::class, 'packages'])->name('packages');
 Route::get('package_details/{id}', [FrontendController::class, 'package_details'])->name('package_details');
+Route::post('enquiry_email', [EnquiryController::class, 'enquiry_email'])->name('enquiry_email');
 
 
 // destinations
