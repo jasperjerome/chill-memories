@@ -774,7 +774,7 @@
                             <div class="tab-pane fade" id="v-pills-contact" role="tabpanel"
                                 aria-labelledby="v-pills-contact-tab">
                                 <div class="sidebar-booking-form">
-                                    <form>
+                                    <form action="" method="post">
                                         <div class="form-inner mb-20">
                                             <label>Full Name <span>*</span></label>
                                             <input type="text" placeholder="Enter your full name">
