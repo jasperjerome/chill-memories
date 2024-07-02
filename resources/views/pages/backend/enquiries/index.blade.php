@@ -38,7 +38,7 @@
                                 </tr>
                             @endforeach
                         @else
-                        <tr><td colspan="5">No Enquiries Found</td></tr>
+                        <tr><td colspan="8" style="text-align: center;">No Enquiries Found</td></tr>
                         @endif
                     </table>
                 </div>

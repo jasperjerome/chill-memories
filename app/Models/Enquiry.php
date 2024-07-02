@@ -10,7 +10,7 @@ class Enquiry extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'user_id',
         'email',
         'mobile',
         'destination',
@@ -19,4 +19,8 @@ class Enquiry extends Model
         'from',
         'to',
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

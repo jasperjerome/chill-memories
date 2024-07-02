@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('enquiries', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->unsignedBigInteger('user_id');
             $table->string('email');
             $table->string('mobile');
             $table->string('destination');
@@ -21,8 +21,9 @@ return new class extends Migration
             $table->integer('no_of_children');
             $table->date('from');
             $table->date('to');
-
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

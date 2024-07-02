@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\EnquiryAdminMail;
 use App\Mail\EnquiryVisitorMail;
 use App\Models\Enquiry;
+use App\Models\User;
 use Illuminate\Support\Facades\Log;
 
 class EnquiryController extends Controller
@@ -28,6 +29,13 @@ class EnquiryController extends Controller
         $details['mobile'] = $request->get('mobile');
         $details['destination'] = $request->get('destination');
 
+        $user = User::create([
+            'name'=>$request->get('name'),
+            'email'=>$request->get('email'),
+            'mobile'=>$request->get('mobile'),
+            'role'=>'customer',
+        ]);
+        
         $data = new Enquiry;
 
         $data->name = $request->get('name');

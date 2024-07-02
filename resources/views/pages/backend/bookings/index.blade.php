@@ -28,17 +28,23 @@
                         </thead>
                         @if ($data->count())
                             @foreach ($data as $datas)
-                                <td>{{$datas->name}}</td>
-                                <td>{{$datas->email}}</td>
-                                <td>{{$datas->mobile}}</td>
-                                <td>{{$datas->destination}}</td>
-                                <td>{{$datas->no_of_adults}}Adults {{$datas->no_of_children}}Children</td>
-                                <td>{{$datas->package}}</td>
-                                <td>{{$datas->from}}</td>
-                                <td>{{$datas->to}}</td>
-                                <td>{{$datas->created_at->format('d-m-Y')}}</td>
-                                <td><a href="#!" class="btn btn-primary">Create Voucher</a></td>
+                                <tr>
+                                    <td>{{$datas->name}}</td>
+                                    <td>{{$datas->email}}</td>
+                                    <td>{{$datas->mobile}}</td>
+                                    <td>{{$datas->destination}}</td>
+                                    <td>{{$datas->no_of_adults}}Adults {{$datas->no_of_children}}Children</td>
+                                    <td>{{$datas->package}}</td>
+                                    <td>{{$datas->from}}</td>
+                                    <td>{{$datas->to}}</td>
+                                    <td>{{$datas->created_at->format('d-m-Y')}}</td>
+                                    <td><a href="#!" class="btn btn-primary">Create Voucher</a></td>
+                                </tr>
                             @endforeach
+                        @else
+                        <tr>
+                            <td colspan="10" style="text-align: center;">No Datas Found</td>
+                        </tr>
                         @endif
                     </table>
                 </div>
