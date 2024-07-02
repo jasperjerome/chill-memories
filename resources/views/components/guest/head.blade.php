@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/slick-theme.css')}}">
 
-    <link href="assets/css/boxicons.min.css" rel="stylesheet">
+    {{-- <link href="assets/css/boxicons.min.css" rel="stylesheet"> --}}
 
     <link href="{{asset('assets/css/select2.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/nice-select.css')}}" rel="stylesheet">

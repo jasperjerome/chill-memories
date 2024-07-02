@@ -11,17 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->string('payment_id');
-            $table->integer('user_id');
-            $table->integer('package_id');
             $table->string('name');
             $table->string('email');
-            $table->bigInteger('amount');
-            $table->string('payment_method');
-            $table->string('payment_status');
-            $table->longText('if_card');
+            $table->string('mobile');
+            $table->string('destination');
+            $table->integer('no_of_adults');
+            $table->integer('no_of_children');
+            $table->date('from');
+            $table->date('to');
+            $table->string('package');
+            $table->string('source');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('bookings');
     }
 };

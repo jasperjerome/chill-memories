@@ -29,7 +29,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="index.html"><img src="assets/img/chill-memories-logo.jpeg"
+                            <a href="index.html"><img src="{{asset('assets/img/chill-memories-logo.jpeg')}}"
                                     alt=""></a>
                         </div>
                         <h3>Want <span>to Take <br></span> Tour Packages<span>?</span></h3>
@@ -111,11 +111,11 @@
                             </div>
                             <div class="icons">
                                 <ul>
-                                    <li><img src="assets/img/home1/icon/visa-logo.svg" alt=""></li>
-                                    <li><img src="assets/img/home1/icon/stripe-logo.svg" alt=""></li>
-                                    <li><img src="assets/img/home1/icon/paypal-logo.svg" alt=""></li>
-                                    <li><img src="assets/img/home1/icon/woo-logo.svg" alt=""></li>
-                                    <li><img src="assets/img/home1/icon/skrill-logo.svg" alt=""></li>
+                                    <li><img src="{{asset('assets/img/home1/icon/visa-logo.svg')}}" alt=""></li>
+                                    <li><img src="{{asset('assets/img/home1/icon/stripe-logo.svg')}}" alt=""></li>
+                                    <li><img src="{{asset('assets/img/home1/icon/paypal-logo.svg')}}" alt=""></li>
+                                    <li><img src="{{asset('assets/img/home1/icon/woo-logo.svg')}}" alt=""></li>
+                                    <li><img src="{{asset('assets/img/home1/icon/skrill-logo.svg')}}" alt=""></li>
                                 </ul>
                             </div>
                         </div>

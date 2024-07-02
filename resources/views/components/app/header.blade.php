@@ -1,7 +1,7 @@
 <div class="right-sidebar-menu">
     <div class="sidebar-logo-area d-flex justify-content-between align-items-center">
         <div class="sidebar-logo-wrap">
-            <a href="index.html"><img alt="image" src="assets/img/logo.svg"></a>
+            <a href="index.html"><img alt="image" src="{{asset('assets/img/chill-memories-logo.jpeg')}}"></a>
         </div>
         <div class="right-sidebar-close-btn">
             <i class="bi bi-x"></i>
@@ -124,152 +124,6 @@
                 </li>
             </ul>
         </div>
-        <div class="destination-wrapper">
-            <h4>Our Destinations</h4>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="swiper destination-sidebar-slider mb-35">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="destination-card2">
-                                    <a href="destination-details.html" class="destination-card-img">
-                                        <img src="assets/img/home2/destination-card-sidebar-img1.png"
-                                            alt="">
-                                    </a>
-                                    <div class="batch">
-                                        <span>5 Tour</span>
-                                    </div>
-                                    <div class="destination-card2-content">
-                                        <span>Travel To</span>
-                                        <h4><a href="destination-details.html">New York</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="destination-card2">
-                                    <a href="destination-details.html" class="destination-card-img">
-                                        <img src="assets/img/home2/destination-card-sidebar-img2.png"
-                                            alt="">
-                                    </a>
-                                    <div class="batch">
-                                        <span>8 Tour</span>
-                                    </div>
-                                    <div class="destination-card2-content">
-                                        <span>Travel To</span>
-                                        <h4><a href="destination-details.html">Switzerland</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="destination-card2">
-                                    <a href="destination-details.html" class="destination-card-img">
-                                        <img src="assets/img/home2/destination-card-sidebar-img3.png"
-                                            alt="">
-                                    </a>
-                                    <div class="batch">
-                                        <span>4 Tour</span>
-                                    </div>
-                                    <div class="destination-card2-content">
-                                        <span>Travel To</span>
-                                        <h4><a href="destination-details.html">Saudi Arab</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="destination-card2">
-                                    <a href="destination-details.html" class="destination-card-img">
-                                        <img src="assets/img/home2/destination-card-sidebar-img4.png"
-                                            alt="">
-                                    </a>
-                                    <div class="batch">
-                                        <span>6 Tour</span>
-                                    </div>
-                                    <div class="destination-card2-content">
-                                        <span>Travel To</span>
-                                        <h4><a href="destination-details.html">Indonesia</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="destination-card2">
-                                    <a href="destination-details.html" class="destination-card-img">
-                                        <img src="assets/img/home2/destination-card-sidebar-img1.png"
-                                            alt="">
-                                    </a>
-                                    <div class="batch">
-                                        <span>5 Tour</span>
-                                    </div>
-                                    <div class="destination-card2-content">
-                                        <span>Travel To</span>
-                                        <h4><a href="destination-details.html">New York</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="destination-card2">
-                                    <a href="destination-details.html" class="destination-card-img">
-                                        <img src="assets/img/home2/destination-card-sidebar-img2.png"
-                                            alt="">
-                                    </a>
-                                    <div class="batch">
-                                        <span>8 Tour</span>
-                                    </div>
-                                    <div class="destination-card2-content">
-                                        <span>Travel To</span>
-                                        <h4><a href="destination-details.html">Switzerland</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="destination-card2">
-                                    <a href="destination-details.html" class="destination-card-img">
-                                        <img src="assets/img/home2/destination-card-sidebar-img3.png"
-                                            alt="">
-                                    </a>
-                                    <div class="batch">
-                                        <span>4 Tour</span>
-                                    </div>
-                                    <div class="destination-card2-content">
-                                        <span>Travel To</span>
-                                        <h4><a href="destination-details.html">Saudi Arab</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="destination-card2">
-                                    <a href="destination-details.html" class="destination-card-img">
-                                        <img src="assets/img/home2/destination-card-sidebar-img4.png"
-                                            alt="">
-                                    </a>
-                                    <div class="batch">
-                                        <span>6 Tour</span>
-                                    </div>
-                                    <div class="destination-card2-content">
-                                        <span>Travel To</span>
-                                        <h4><a href="destination-details.html">Indonesia</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide-and-view-btn-grp">
-                        <div class="destination-sidebar-prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="13"
-                                viewbox="0 0 53 13">
-                                <path d="M53 6.5L1 6.5M1 6.5L7 12M1 6.5L7 0.999996"></path>
-                            </svg>
-                        </div>
-                        <a href="destination2.html" class="secondary-btn2">View All</a>
-                        <div class="destination-sidebar-next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="13"
-                                viewbox="0 0 53 13">
-                                <path d="M0 6.5H52M52 6.5L46 1M52 6.5L46 12"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="sidebar-bottom">
         <div class="hotline-area">
@@ -316,7 +170,7 @@
         <div class="modal-content">
             <div class="modal-clode-btn" data-bs-dismiss="modal"></div>
             <div class="modal-header">
-                <img src="assets/img/home1/login-modal-header-img.jpg" alt="">
+                <img src="{{asset('assets/img/home1/login-modal-header-img.jpg')}}" alt="">
             </div>
             <div class="modal-body">
                 <div class="login-registration-form">
@@ -334,7 +188,7 @@
                         </div>
                         <a href="#" class="google-login-btn">
                             <div class="icon">
-                                <img src="assets/img/home1/icon/google-icon.svg" alt="">
+                                <img src="{{asset('assets/img/home1/icon/google-icon.svg')}}" alt="">
                             </div>
                             Sign in with Google
                         </a>
@@ -348,7 +202,7 @@
 <header class="header-area style-1 dashboard">
     <div class="header-log-and-sb-btn">
         <div class="header-logo">
-            <a href="index.html"><img alt="image" class="img-fluid" src="assets/img/logo.svg"></a>
+            <a href="index.html"><img alt="image" class="img-fluid" src="{{asset('assets/img/chill-memories-logo.jpeg')}}"></a>
         </div>
         <div class="dashboard-sb-btn">
             <svg class="sidebar-toggle-button" width="25" height="25" viewbox="0 0 18 18"
@@ -371,7 +225,7 @@
     <div class="main-menu">
         <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
             <div class="mobile-logo-wrap">
-                <a href="index.html"><img alt="image" src="assets/img/logo.svg"></a>
+                <a href="index.html"><img alt="image" src="{{asset('assets/img/logo.svg')}}"></a>
             </div>
             <div class="menu-close-btn">
                 <i class="bi bi-x"></i>

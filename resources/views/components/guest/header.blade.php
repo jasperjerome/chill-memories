@@ -26,7 +26,7 @@
         </div>
     </div> -->
 
-    <div class="right-sidebar-menu">
+    <div class="right-sidebar-menu d-none">
         <div class="sidebar-logo-area d-flex justify-content-between align-items-center">
             <div class="sidebar-logo-wrap">
                 <!-- <a href="index.html"><img alt="image" src="assets/img/logo.svg"></a> -->
@@ -152,107 +152,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="destination-wrapper">
-                <h4>Our Destinations</h4>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="swiper destination-sidebar-slider mb-35">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="destination-card2">
-                                        <a href="destination-details.html" class="destination-card-img">
-                                            <img src="assets/img/home2/destination-card-sidebar-img1.png"
-                                                alt="">
-                                        </a>
-                                        <!-- <div class="batch">
-                                            <span>5 Tour</span>
-                                        </div> -->
-                                        <div class="destination-card2-content">
-                                            <span>Travel To</span>
-                                            <h4><a href="destination-details.html">Kerala</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="destination-card2">
-                                        <a href="destination-details.html" class="destination-card-img">
-                                            <img src="assets/img/home2/destination-card-sidebar-img2.png"
-                                                alt="">
-                                        </a>
-                                        <!-- <div class="batch">
-                                            <span>8 Tour</span>
-                                        </div> -->
-                                        <div class="destination-card2-content">
-                                            <span>Travel To</span>
-                                            <h4><a href="destination-details.html">Coorg</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="destination-card2">
-                                        <a href="destination-details.html" class="destination-card-img">
-                                            <img src="assets/img/home2/destination-card-sidebar-img3.png"
-                                                alt="">
-                                        </a>
-                                        <!-- <div class="batch">
-                                            <span>4 Tour</span>
-                                        </div> -->
-                                        <div class="destination-card2-content">
-                                            <span>Travel To</span>
-                                            <h4><a href="destination-details.html">Wayanad</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="destination-card2">
-                                        <a href="destination-details.html" class="destination-card-img">
-                                            <img src="assets/img/home2/destination-card-sidebar-img4.png"
-                                                alt="">
-                                        </a>
-                                        <!-- <div class="batch">
-                                            <span>6 Tour</span>
-                                        </div> -->
-                                        <div class="destination-card2-content">
-                                            <span>Travel To</span>
-                                            <h4><a href="destination-details.html">Kodaikanal</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="destination-card2">
-                                        <a href="destination-details.html" class="destination-card-img">
-                                            <img src="assets/img/home2/destination-card-sidebar-img1.png"
-                                                alt="">
-                                        </a>
-                                        <!-- <div class="batch">
-                                            <span>5 Tour</span>
-                                        </div> -->
-                                        <div class="destination-card2-content">
-                                            <span>Travel To</span>
-                                            <h4><a href="destination-details.html">Kashmir</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-and-view-btn-grp">
-                            <div class="destination-sidebar-prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="53" height="13"
-                                    viewbox="0 0 53 13">
-                                    <path d="M53 6.5L1 6.5M1 6.5L7 12M1 6.5L7 0.999996"></path>
-                                </svg>
-                            </div>
-                            <a href="destination2.html" class="secondary-btn2">View All</a>
-                            <div class="destination-sidebar-next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="53" height="13"
-                                    viewbox="0 0 53 13">
-                                    <path d="M0 6.5H52M52 6.5L46 1M52 6.5L46 12"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="sidebar-bottom">
             <div class="hotline-area">
@@ -299,7 +198,7 @@
             <div class="modal-content">
                 <div class="modal-clode-btn" data-bs-dismiss="modal"></div>
                 <div class="modal-header">
-                    <img src="assets/img/home1/login-modal-header-img.jpg" alt="">
+                    <img src="{{asset('assets/img/home1/login-modal-header-img.jpg')}}" alt="">
                 </div>
                 <div class="modal-body">
                     <div class="login-registration-form">
@@ -307,19 +206,46 @@
                             <h2>Sign in to continue</h2>
                             <p>Enter your email address for Login.</p>
                         </div>
-                        <form>
+                        <form action="{{route('customer_create')}}" method="post">
+                            @csrf
                             <div class="form-inner mb-20">
-                                <input type="text" placeholder="User name or Email *">
+                                {{-- <input type="text" placeholder="Enter Your Name"> --}}
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="name" required autocomplete="name" autofocus>
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
-                            <a href="#" class="login-btn mb-25">Sign In</a>
+                            <div class="form-inner mb-20">
+                                {{-- <input type="text" placeholder="Enter Your Email"> --}}
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="email">
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-inner mb-20">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="password">
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-inner mb-20">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="confirm password">
+                            </div>
+                            <button class="login-btn mb-25">Sign In</button>
                             <div class="divider">
                                 <span>or</span>
                             </div>
-                            <a href="#" class="google-login-btn">
+                            <a href="{{route('login')}}" class="google-login-btn">
                                 <div class="icon">
-                                    <img src="assets/img/home1/icon/google-icon.svg" alt="">
+                                    <img src="{{asset('assets/img/home1/icon/google-icon.svg')}}" alt="">
                                 </div>
-                                Sign in with Google
+                                Login
                             </a>
                         </form>
                     </div>
@@ -364,7 +290,7 @@
     </div> -->
 
     <header class="header-area style-1">
-        <ul class="icon-list d-md-none">
+        <ul class="icon-list d-md-none d-none">
             <li class="d-lg-flex d-none">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#user-login">
                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewbox="0 0 27 27"
@@ -444,6 +370,11 @@
                     REGISTER/ LOGIN
                 </button>
             </div>
+            <div class="topbar-right d-lg-none d-block">
+                <button type="button" class="modal-btn header-cart-btn">
+                    DASHBOARD
+                </button>
+            </div>
             <div class="hotline-area d-lg-none d-flex">
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
@@ -482,7 +413,8 @@
                         </svg>
                     </a>
                 </li>
-                <li class="right-sidebar-button">
+                {{-- <li><a href="nav-link">Dashboard</a></li> --}}
+                <li class="right-sidebar-button d-none">
                     <svg class="sidebar-toggle-button" width="25" height="25" viewBox="0 0 18 18"
                         xmlns="http://www.w3.org/2000/svg">
                         <path

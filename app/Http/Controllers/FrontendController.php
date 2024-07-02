@@ -45,10 +45,11 @@ class FrontendController extends Controller
     public function package_details($id)
     {
         $data = Package::with(['destination'])->findOrFail($id);
+        $destinations = Destination::get();
 
         $itineraryIds = json_decode($data->itinerary);
         $itineraries = Itinerary::whereIn('id', $itineraryIds)->get();
         // return $itineraries;
-        return view('pages.frontend.package_details', compact('data', 'itineraries'));
+        return view('pages.frontend.package_details', compact('data', 'itineraries', 'destinations'));
     }
 }

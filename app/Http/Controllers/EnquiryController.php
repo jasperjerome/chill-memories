@@ -6,12 +6,21 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EnquiryAdminMail;
 use App\Mail\EnquiryVisitorMail;
+use App\Models\Enquiry;
+use Illuminate\Support\Facades\Log;
 
 class EnquiryController extends Controller
 {
+
+    public function index() {
+        $data = Enquiry::get();
+
+        return view('pages.backend.enquiries.index', compact('data'));
+    }
     
 
     public function enquiry_email(Request $request) {
+        // return $request->all();
         $details = [];
 
         $details['name'] = $request->get('name');
@@ -19,10 +28,21 @@ class EnquiryController extends Controller
         $details['mobile'] = $request->get('mobile');
         $details['destination'] = $request->get('destination');
 
-        Mail::to($request->email)->send(new EnquiryVisitorMail($details));
-        Mail::to('jasperjerome4@gmail.com')->send(new EnquiryAdminMail($details));
+        $data = new Enquiry;
 
-        // return back()->with('success', 'Your inquiry has been submitted!');
-        return 'Your inquiry has been submitted!';
+        $data->name = $request->get('name');
+        $data->email = $request->get('email');
+        $data->mobile = $request->get('mobile');
+        $data->destination = $request->get('destination');
+        $data->no_of_adults = $request->get('no_of_adults');
+        $data->no_of_children = $request->get('no_of_children');
+        $data->from = $request->get('from');
+        $data->to = $request->get('to');
+        $data->save();
+
+        // Mail::to($request->email)->send(new EnquiryVisitorMail($details));
+        // Mail::to('jasperjerome4@gmail.com')->send(new EnquiryAdminMail($details));
+
+        return redirect()->back()->with('create', 'Your inquiry has been submitted!');
     }
 }

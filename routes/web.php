@@ -1,17 +1,28 @@
 <?php
 
 use App\Http\Controllers\AdController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\PackageController;
+use App\Http\Controllers\Paymentcontroller;
+use App\Http\Controllers\Usercontroller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('booking', function() {
+    return view('emails.bookings.booking_confirm_1');
+});
+
+// customer registration
+Route::post('customer_create', [Usercontroller::class, 'customerCreate'])->name('customer_create');
+Route::get('customers', [Usercontroller::class, 'customers'])->name('customers');
 
 // frontend routes
 Route::get('fe_home', [FrontendController::class, 'index'])->name('fe_home');
@@ -21,7 +32,13 @@ Route::get('packages', [FrontendController::class, 'packages'])->name('packages'
 Route::get('package_details/{id}', [FrontendController::class, 'package_details'])->name('package_details');
 Route::post('enquiry_email', [EnquiryController::class, 'enquiry_email'])->name('enquiry_email');
 
+// payement route
+Route::post('payment', [Paymentcontroller::class, 'payment'])->name('payment');
+Route::get('payment_success', [Paymentcontroller::class, 'payment_success'])->name('payment_success');
+Route::get('payment_cancel', [Paymentcontroller::class, 'payment_cancel'])->name('payment_cancel');
 
+// dashboard
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 // destinations
 Route::get('app/destinations', [DestinationController::class, 'index'])->name('app.destinations');
 Route::get('app/destinations/create', [DestinationController::class, 'create'])->name('app.destinations.create');
@@ -37,6 +54,16 @@ Route::get('app/itinerary', [ItineraryController::class, 'index'])->name('app.it
 Route::get('app/itinerary/create', [ItineraryController::class, 'create'])->name('app.itinerary.create');
 Route::post('app/itinerary/store', [ItineraryController::class, 'store'])->name('app.itinerary.store');
 Route::get('app/getItineraryByDestination/{id}', [ItineraryController::class, 'getItineraryByDestination'])->name('app.getItineraryByDestination');
+
+// enquiry
+Route::get('app/enquiries', [EnquiryController::class, 'index'])->name('app.enquiries');
+
+// booking
+Route::get('app/bookings', [BookingController::class, 'index'])->name('app.bookings');
+Route::get('app/bookings/create_for_enquired/{id}', [BookingController::class, 'createForEnquired'])->name('app.bookings.createForEnquired');
+Route::get('app/bookings/create_booking', [BookingController::class, 'createBooking'])->name('app.bookings.create_booking');
+Route::get('app/bookings/create_booking_for_enquired/{id}', [BookingController::class, 'createBookingForEnquired'])->name('app.bookings.create_booking_for_enquired');
+Route::post('app/bookings/store', [BookingController::class, 'store'])->name('app.bookings.store');
 
 // as post
 Route::get('app/ad', [AdController::class, 'index'])->name('app.ad');
@@ -59,12 +86,10 @@ Route::get('destination_list', function() {
 Route::get('package_details', function() {
     return view('pages.frontend.package_details');
 });
-Route::get('destination_details', function() {
-    return view('pages.frontend.destination_details');
+Route::get('create_booking', function() {
+    return view('pages.backend.bookings.create');
 });
-Route::get('dashboard', function() {
-    return view('pages.backend.dashboard.dashboard');
-});
+
 Route::get('des-c', function() {
     return view('pages.backend.destinations.create');
 });

@@ -1,6 +1,18 @@
 @extends('layouts.guest')
 
+@section('css')
+    <style>
+        .nice-select {
+            margin-bottom: 10px;
+            background: #fff;
+            border: 1px solid #f4f1f1;
+            border-radius: 0;
+        }
+    </style>
+@endsection
+
 @section('content')
+
     <div class="breadcrumb-section"
         style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url({{asset('assets/uploads/breadcrumb_imgs/' .$data->breadcrumb_img)}});">
         <div class="container">
@@ -19,24 +31,16 @@
         </div>
     </div>
 
-    <div class="bg-primary">
-        <p>amount 500</p>
-        <form action="" method="">
-        @csrf
-        <script type="text/javascript" src="https://checkout.razorpay.com/v1/checkout.js" 
-        data-key="{{env('RAZORPAY_API_KEY')}}"
-        data-amount="1000" 
-        data-buttontext="pay 10"
-        data-image=""
-        data-notes.customer_name = "chill-memories"
-        data-notes.customer_email = "chillmemories@gmail.com"
-        data-notes.product_name = "chill-memories"
-        data-notes.quantity = "1"
-        data-prefill.name = "chill memories"
-        ></script>
-    </form>
+    @if (\Session::has('create'))
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast bg-success text-light show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                {{ \Session::get('create') }}
+            </div>
+        </div>
     </div>
-
+    @endif
+    
     <div class="package-details-area pt-120 mb-120 position-relative">
         <div class="container">
             <div class="row">
@@ -384,7 +388,7 @@
                                                 </div>
                                                 <div class="col-lg-4 d-lg-flex d-none">
                                                     <div class="modal-form-image">
-                                                        <img src="assets/img/innerpage/form-image.jpg" alt="image"
+                                                        <img src="{{asset('assets/img/innerpage/form-image.jpg')}}" alt="image"
                                                             class="img-fluid">
                                                     </div>
                                                 </div>
@@ -403,7 +407,7 @@
                                 <li>
                                     <div class="single-comment-area">
                                         <div class="author-img">
-                                            <img src="assets/img/innerpage/comment-author-01.jpg" alt="">
+                                            <img src="{{asset('assets/img/innerpage/comment-author-01.jpg')}}" alt="">
                                         </div>
                                         <div class="comment-content">
                                             <div class="author-name-deg">
@@ -480,7 +484,7 @@
                                         <li>
                                             <div class="single-comment-area">
                                                 <div class="author-img">
-                                                    <img src="assets/img/innerpage/comment-author-02.jpg" alt="">
+                                                    <img src="{{asset('assets/img/innerpage/comment-author-02.jpg')}}" alt="">
                                                 </div>
                                                 <div class="comment-content">
                                                     <div class="author-name-deg">
@@ -505,7 +509,7 @@
                                 <li>
                                     <div class="single-comment-area">
                                         <div class="author-img">
-                                            <img src="assets/img/innerpage/comment-author-04.jpg" alt="">
+                                            <img src="{{asset('assets/img/innerpage/comment-author-04.jpg')}}" alt="">
                                         </div>
                                         <div class="comment-content">
                                             <div class="author-name-deg">
@@ -582,7 +586,7 @@
                                 <li>
                                     <div class="single-comment-area">
                                         <div class="author-img">
-                                            <img src="assets/img/innerpage/comment-author-05.jpg" alt="">
+                                            <img src="{{asset('assets/img/innerpage/comment-author-05.jpg')}}" alt="">
                                         </div>
                                         <div class="comment-content">
                                             <div class="author-name-deg">
@@ -725,44 +729,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="booking-form-item-type">
-                                        <div class="single-total mb-30">
-                                            <span>Adult</span>
-                                            <ul>
-                                                <li><strong>₹195</strong> PRICE</li>
-                                                <li><i class="bi bi-x-lg"></i></li>
-                                                <li><strong>02</strong> QTY</li>
-                                                <li><i class="bi bi-x-lg"></i></li>
-                                                <li><strong>04</strong> DAYS</li>
-                                            </ul>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="15"
-                                                viewbox="0 0 27 15">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M23.999 5.44668L25.6991 7.4978L23.9991 9.54878H0V10.5743H23.1491L20.0135 14.3575L20.7834 14.9956L26.7334 7.81687L26.9979 7.4978L26.7334 7.17873L20.7834 0L20.0135 0.638141L23.149 4.42114H0V5.44668H23.999Z">
-                                                </path>
-                                            </svg>
-                                            <div class="total">₹390</div>
-                                        </div>
-                                        <div class="single-total mb-30">
-                                            <span>Children</span>
-                                            <ul>
-                                                <li><strong>₹195</strong> PRICE</li>
-                                                <li><i class="bi bi-x-lg"></i></li>
-                                                <li><strong>02</strong> QTY</li>
-                                                <li><i class="bi bi-x-lg"></i></li>
-                                                <li><strong>04</strong> DAYS</li>
-                                            </ul>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="15"
-                                                viewbox="0 0 27 15">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M23.999 5.44668L25.6991 7.4978L23.9991 9.54878H0V10.5743H23.1491L20.0135 14.3575L20.7834 14.9956L26.7334 7.81687L26.9979 7.4978L26.7334 7.17873L20.7834 0L20.0135 0.638141L23.149 4.42114H0V5.44668H23.999Z">
-                                                </path>
-                                            </svg>
-                                            <div class="total">₹390</div>
-                                        </div>
-                                    </div>
                                         <div class="total-price"><span>Total Price:</span> ₹470</div>
-                                        <button type="submit" class="primary-btn1 two mb-70">Book Now</button>
+                                        {{-- <button type="submit" class="primary-btn1 two mb-70">Book Now</button> --}}
+                                        <button id="rzp-button1" class = "primary-btn1 two mb-70" ><i class="fas fa-money-bill"></i> Pay with Razorpay</button>
                                     </form>
                                 </div>
                             </div>
@@ -785,7 +754,34 @@
                                         </div>
                                         <div class="form-inner mb-30">
                                             <label>Destination <span>*</span></label>
-                                            <input type="text" name="destination" placeholder="Enter your Destination">
+                                            {{-- <input type="text" name="destination" placeholder="Enter your Destination"> --}}
+
+                                            <select name="destination" id="destination">
+                                                <option value="">Select Destination</option>
+                                                @foreach ($destinations as $destination)
+                                                <option value="{{$destination->title}}">{{$destination->title}}</option>
+                                            @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="row mb-30">
+                                            <div class="col-6 form-inner">
+                                                <label for="">No Of Adults</label>
+                                                <input type="number" placeholder="number" name="no_of_adults"/>
+                                            </div>
+                                            <div class="col-6 form-inner">
+                                                <label for="">No Of Children</label>
+                                                <input type="number" placeholder="number" name="no_of_children"/>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-30">
+                                            <div class="col-6 form-inner">
+                                                <label for="">From date</label>
+                                                <input type="date" placeholder="number" name="from"/>
+                                            </div>
+                                            <div class="col-6 form-inner">
+                                                <label for="">To Date</label>
+                                                <input type="date" placeholder="number" name="to"/>
+                                            </div>
                                         </div>
                                         <div class="form-inner mb-60">
                                             <button type="submit" class="primary-btn1 two">Submit Now</button>
@@ -796,7 +792,7 @@
                         </div>
                     </div>
                     <div class="banner2-card">
-                        <img src="assets/img/innerpage/support-img.jpg" alt="">
+                        <img src="{{asset('assets/img/innerpage/support-img.jpg')}}" alt="">
                         <div class="banner2-content-wrap">
                             <div class="banner2-content">
                                 <div class="hotline-area">
@@ -826,4 +822,35 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script>
+        let options = {
+    key: "{{env('RAZORPAY_API_KEY')}}",
+    name: "Razorpay Testing",
+    amount : "100",
+    currency : "INR",
+    description: "Test Description",
+    handler: function (response) {
+       alert(response.razorpay_payment_id)
+           },
+    prefill: {
+         "contact" : '+919999999999',
+        "email" : "test@test.com"
+    },
+		
+    notes: {
+       address : "hello world"
+    }
+}
+
+var rzp1 = new Razorpay(options);
+
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+
+    </script>
 @endsection
