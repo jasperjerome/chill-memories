@@ -8,6 +8,7 @@ use App\Models\Destination;
 use App\Models\Enquiry;
 use App\Models\Package;
 use App\Models\User;
+use App\Models\Voucher;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -76,7 +77,26 @@ class BookingController extends Controller
     public function createVoucher($id) {
         $data = Booking::findOrFail($id);
 
-        return view('pages.backend.bookings.create', compact('data'));
+        $users = User::where('role', 'co-ordinator')->get();
+
+        return view('pages.backend.bookings.create', compact('data', 'users'));
+    }
+
+    public function storeVoucher(Request $request) {
+        $data = new Voucher;
+
+        $data->booking_id = $request->get('booking_id');
+        $data->pickup_from = $request->get('pickup_from');
+        $data->drop_to = $request->get('drop_to');
+        $data->user_id = $request->get('user_id');
+        $data->hotel_location = $request->get('hotel_location');
+        $data->hotel_name = $request->get('hotel_name');
+        $data->other = $request->get('other');
+        $data->cab = $request->get('cab');
+        $data->save();
+
+        return redirect()->route('app.bookings')->with('create', 'Voucher Created Successfully');
+        
     }
 
 }

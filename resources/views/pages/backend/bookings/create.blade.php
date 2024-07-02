@@ -73,20 +73,27 @@
                                 <div class="col-md-4">
                                     <div class="form-inner mb-30">
                                         <label>Pickup From</label>
-                                        <input type="text" name="to" placeholder="Puckup Location" />
+                                        <input type="text" name="pickup_from" placeholder="Puckup Location" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-inner mb-30">
                                         <label>Drop To</label>
-                                        <input type="text" name="to" placeholder="Drop Location" />
+                                        <input type="text" name="drop_to" placeholder="Drop Location" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-inner mb-30">
                                         <label>Assign Co-ordinator</label>
-                                        <select name="user_id" id="">
+                                        <select name="user_id" id="user_id">
                                             <option value="">Select Co-ordinator</option>
+                                            @if ($users->count())
+                                                @foreach ($users as $user)
+                                                    <option value="{{$user->id}}">{{$user->name}}</option>
+                                                @endforeach
+                                            @else
+                                            <option value="">No Users Found</option>
+                                            @endif
                                         </select>
                                     </div>
                                 </div>
