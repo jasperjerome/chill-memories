@@ -19,6 +19,24 @@
         </div>
     </div>
 
+    <div class="bg-primary">
+        <p>amount 500</p>
+        <form action="" method="">
+        @csrf
+        <script type="text/javascript" src="https://checkout.razorpay.com/v1/checkout.js" 
+        data-key="{{env('RAZORPAY_API_KEY')}}"
+        data-amount="1000" 
+        data-buttontext="pay 10"
+        data-image=""
+        data-notes.customer_name = "chill-memories"
+        data-notes.customer_email = "chillmemories@gmail.com"
+        data-notes.product_name = "chill-memories"
+        data-notes.quantity = "1"
+        data-prefill.name = "chill memories"
+        ></script>
+    </form>
+    </div>
+
     <div class="package-details-area pt-120 mb-120 position-relative">
         <div class="container">
             <div class="row">
@@ -707,29 +725,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="booking-form-item-type">
-                                        <h5>Other Extra Services</h5>
-                                        <div class="checkbox-container">
-                                            <label class="check-container">Home Pickup
-                                                <input type="checkbox" class="services_check" name="services_list[]"
-                                                    value="0">
-                                                <span class="checkmark"></span>
-                                                <span class="price">₹10 </span>
-                                            </label>
-                                            <label class="check-container">Night Food
-                                                <input type="checkbox" class="services_check" name="services_list[]"
-                                                    value="1">
-                                                <span class="checkmark"></span>
-                                                <span class="price">₹15 </span>
-                                            </label>
-                                            <label class="check-container">Seaplane Fyling
-                                                <input type="checkbox" class="services_check" name="services_list[]"
-                                                    value="2">
-                                                <span class="checkmark"></span>
-                                                <span class="price">₹20 </span>
-                                            </label>
-                                        </div>
-                                    </div>
                                         <div class="booking-form-item-type">
                                         <div class="single-total mb-30">
                                             <span>Adult</span>

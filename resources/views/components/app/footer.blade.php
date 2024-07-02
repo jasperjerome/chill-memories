@@ -13,25 +13,25 @@
 
 @if (\Session::has('create'))
     <div class="toast-container position-fixed top-0 end-0 p-3">
-        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="liveToast" class="toast bg-success text-light" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body">
-                Hello, world! This is a toast message.
+                {{ \Session::get('create') }}
             </div>
         </div>
     </div>
 @elseif (\Session::has('update'))
 <div class="toast-container position-fixed top-0 end-0 p-3">
-    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="liveToast" class="toast bg-primary text-light" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-body">
-            Hello, world! This is a toast message.
+            {{ \Session::get('update') }}
         </div>
     </div>
 </div>
 @elseif (\Session::has('delete'))
 <div class="toast-container position-fixed top-0 end-0 p-3">
-    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="liveToast" class="toast bg-danger text-light" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-body">
-            Hello, world! This is a toast message.
+            {{ \Session::get('delete') }}
         </div>
     </div>
 </div>

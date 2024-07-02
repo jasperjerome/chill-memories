@@ -421,7 +421,7 @@
                     <a href="{{route('fe_home')}}" class="drop-down">Home</a>
                 </li>
                 <li>
-                    <a href="package-details.html" class="drop-down">Package</a>
+                    <a href="{{route('packages')}}" class="drop-down">Packages</a>
                 </li>
                 <li>
                     <a href="{{route('destinations')}}" class="drop-down">Destination</a>
