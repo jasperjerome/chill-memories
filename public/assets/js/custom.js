@@ -107,12 +107,12 @@
         locale: { format: "DD-MMM" },
       },
       function (start, end, label) {
-        console.log(
-          "A new date selection was made: " +
-            start.format("YYYY-MM-DD") +
-            " to " +
-            end.format("YYYY-MM-DD")
-        );
+        // console.log(
+        //   "A new date selection was made: " +
+        //     start.format("YYYY-MM-DD") +
+        //     " to " +
+        //     end.format("YYYY-MM-DD")
+        // );
       }
     );
   });
@@ -903,7 +903,7 @@
   });
   const foo = 360 / 7;
   for (let i = 0; i <= 7; i++) {
-    console.log(i * foo + "deg");
+    // console.log(i * foo + "deg");
   }
   $(".location-area").each(function () {
     var dealName = $(this).children(".location-list");

@@ -25,9 +25,9 @@
 
     <script src="{{asset('assets/js/jquery.marquee.min.js')}}"></script>
 
-    <script src="{{asset('assets/js/jquery.nice-select.min.js')}}"></script>
+    {{-- <script src="{{asset('assets/js/jquery.nice-select.min.js')}}"></script>
 
-    <script src="{{asset('assets/js/select2.min.js')}}"></script>
+    <script src="{{asset('assets/js/select2.min.js')}}"></script> --}}
     <script src="{{asset('assets/js/jquery.fancybox.min.js')}}"></script>
 
 

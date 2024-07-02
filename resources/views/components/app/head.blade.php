@@ -22,8 +22,8 @@
 
 <link href="{{asset('assets/css/boxicons.min.css')}}" rel="stylesheet">
 
-<link href="{{asset('assets/css/select2.css')}}" rel="stylesheet">
-<link href="{{asset('assets/css/nice-select.css')}}" rel="stylesheet">
+{{-- <link href="{{asset('assets/css/select2.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/nice-select.css')}}" rel="stylesheet"> --}}
 
 <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/dashboard.css')}}">

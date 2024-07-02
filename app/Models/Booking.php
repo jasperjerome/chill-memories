@@ -10,7 +10,7 @@ class Booking extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'user_id',
         'email',
         'mobile',
         'destination',
@@ -18,6 +18,14 @@ class Booking extends Model
         'no_of_children',
         'from',
         'to',
-        'package',
+        'package_id',
+        'source',
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+    public function package() {
+        return $this->belongsTo(Package::class, 'package_id');
+    }
 }

@@ -29,4 +29,8 @@ class Package extends Model
     public function itineraries() {
         return $this->belongsToMany(Itinerary::class);
     }
+
+    public function bookings() {
+        return $this->hasMany(Booking::class, 'package_id');
+    }
 }

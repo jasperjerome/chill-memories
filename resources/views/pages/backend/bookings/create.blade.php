@@ -18,56 +18,56 @@
                                     <div class="form-inner mb-30">
                                         <label>Name</label>
                                         <input type="text" name="package_title" placeholder="Customer Name"
-                                            value="{{ isset($data->name) ? $data->name : '' }}">
+                                            value="{{$data->user->name}}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>Email Address</label>
                                         <input type="text" name="email" placeholder="Customer Email Address"
-                                            value="{{ isset($data->email) ? $data->email : '' }}">
+                                            value="{{$data->user->email}}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>Mobile Number</label>
                                         <input type="text" name="mobile" placeholder="Customer Mobile Number"
-                                            value="{{ isset($data->mobile) ? $data->mobile : '' }}">
+                                            value="{{$data->mobile}}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>Destination</label>
                                         <input type="text" name="destination" placeholder="Destination" readonly
-                                            value="{{ isset($data->destination) ? $data->destination : '' }}">
+                                            value="{{$data->destination}}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>No Of Adults</label>
                                         <input type="number" name="no_of_adults" placeholder="No Of Adults"
-                                            value="{{ isset($data->no_of_adults) ? $data->no_of_adults : '' }}">
+                                            value="{{$data->no_of_adults}}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>No Of Children</label>
                                         <input type="number" name="no_of_children" placeholder="No Of Children"
-                                            value="{{ isset($data->no_of_children) ? $data->no_of_children : '' }}">
+                                            value="{{$data->no_of_children}}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>From Date</label>
                                         <input type="date" name="from" placeholder="SEO Title"
-                                            value="{{ isset($data->from) ? $data->from : '' }}">
+                                            value="{{ $data->from }}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>To Date</label>
                                         <input type="date" name="to" placeholder="SEO Title"
-                                            value="{{ isset($data->to) ? $data->to : '' }}">
+                                            value="{{ $data->to }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -109,8 +109,8 @@
                                         <div class="form-inner mb-30">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <label>Food</label>
-                                                    <input type="text" name="food[]" placeholder="Enter Food"
+                                                    <label>others</label>
+                                                    <input type="text" name="other[]" placeholder="Enter Food"
                                                         value="">
                                                 </div>
                                                 <div>

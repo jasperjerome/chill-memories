@@ -63,6 +63,7 @@ Route::get('app/bookings', [BookingController::class, 'index'])->name('app.booki
 Route::get('app/bookings/create_for_enquired/{id}', [BookingController::class, 'createForEnquired'])->name('app.bookings.createForEnquired');
 Route::get('app/bookings/create_booking', [BookingController::class, 'createBooking'])->name('app.bookings.create_booking');
 Route::get('app/bookings/create_booking_for_enquired/{id}', [BookingController::class, 'createBookingForEnquired'])->name('app.bookings.create_booking_for_enquired');
+Route::get('app/bookings/create_voucher/{id}', [BookingController::class, 'createVoucher'])->name('app.bookings.create_voucher');
 Route::post('app/bookings/store', [BookingController::class, 'store'])->name('app.bookings.store');
 
 // as post

@@ -7,12 +7,14 @@ use App\Models\Booking;
 use App\Models\Destination;
 use App\Models\Enquiry;
 use App\Models\Package;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
     public function index() {
-        $data = Booking::get();
+        $data = Booking::with('user')->get();
+        // return $data;
         return view('pages.backend.bookings.index', compact('data'));
     }
 
@@ -23,9 +25,33 @@ class BookingController extends Controller
     }
 
     public function store(Request $request) {
+
+        // Check if user_id is set in the request
+    $user = null;
+    if ($request->has('user_id')) {
+        $user = User::find($request->get('user_id'));
+    }
+
+    // If user_id is not set or user does not exist, check if a user with the given email or mobile exists
+    if (!$user) {
+        $user = User::where('email', $request->get('email'))
+                    // ->orWhere('mobile', $request->get('mobile'))
+                    ->first();
+
+        // If no user is found, create a new user
+        if (!$user) {
+            $user = User::create([
+                'name' => $request->get('name'),
+                'email' => $request->get('email'),
+                'password' => $request->get('mobile'), // Set a default password or handle password creation separately
+            ]);
+        }
+    }
+
+
         // return $request;
         $data = new Booking;
-        $data->name = $request->get('name');
+        $data->user_id = $user->id;
         $data->email = $request->get('email');
         $data->mobile = $request->get('mobile');
         $data->destination = $request->get('destination');
@@ -33,7 +59,7 @@ class BookingController extends Controller
         $data->no_of_children = $request->get('no_of_children');
         $data->from = $request->get('from');
         $data->to = $request->get('to');
-        $data->package = $request->get('package');
+        $data->package_id = $request->get('package_id');
         $data->source = $request->get('source');
         $data->save();
 
@@ -41,16 +67,16 @@ class BookingController extends Controller
     }
 
     public function createBookingForEnquired($id) {
-        $data = Enquiry::findOrFail($id);
+        $data = Enquiry::with('user')->findOrFail($id);
         $destinations = Destination::get();
         $packages = Package::get();
         return view('pages.backend.bookings.create_booking', compact('data', 'destinations', 'packages'));
     }
 
-    // public function createForEnquired($id) {
-    //     $data = Enquiry::findOrFail($id);
+    public function createVoucher($id) {
+        $data = Booking::findOrFail($id);
 
-    //     return view('pages.backend.bookings.create', compact('data'));
-    // }
+        return view('pages.backend.bookings.create', compact('data'));
+    }
 
 }

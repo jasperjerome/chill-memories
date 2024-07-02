@@ -27,7 +27,7 @@
                         @if ($data->count())
                             @foreach ($data as $enquiry)
                                 <tr>
-                                    <td>{{$enquiry->name}}</td>
+                                    <td>{{$enquiry->user->name}}</td>
                                     <td>{{$enquiry->email}}</td>
                                     <td>{{$enquiry->mobile}}</td>
                                     <td>{{$enquiry->destination}}</td>

@@ -49,4 +49,7 @@ class User extends Authenticatable
     public function enquiries() {
         return $this->hasMany(Enquiry::class, 'user_id');
     }
+    public function bookings() {
+        return $this->hasMany(User::class, 'user_id');
+    }
 }

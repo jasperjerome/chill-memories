@@ -17,8 +17,9 @@
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>Name</label>
-                                        <input type="text" name="name" placeholder="Customer Name"
-                                            value="{{ isset($data->name) ? $data->name : '' }}">
+                                        <input type="hidden" name="user_id" value="{{isset($data->user->id) ? $data->user->id : ''}}">
+                                        <input type="text" name="name" placeholder="Customer Name" {{isset($data->user->name) ? 'readonly' : ''}}
+                                            value="{{ isset($data->user->name) ? $data->user->name : '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -73,11 +74,11 @@
                                 <div class="col-md-3 mb-100">
                                     <div class="form-inner mb-30">
                                         <label>Package</label>
-                                        <select name="package" id="package">
+                                        <select name="package_id" id="package_id">
                                             <option value="">Select Package</option>
                                             @if ($packages->count())
                                                 @foreach ($packages as $package)
-                                                    <option value="{{$package->package_title}}">{{$package->package_title}}</option>
+                                                    <option value="{{$package->id}}">{{$package->package_title}}</option>
                                                 @endforeach
                                             @endif
                                         </select>

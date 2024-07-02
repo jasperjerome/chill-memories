@@ -25,4 +25,13 @@ class Usercontroller extends Controller
 
         return redirect()->back()->with('create', 'logged in Successfully');
     }
+
+    public function userCreate(Request $request) {
+        $data = new User;
+
+        $data->name = $request->get('name');
+        $data->email = $request->get('email');
+        $data->password = $request->get('password');
+        $data->name = 'co-ordinator';
+    }
 }

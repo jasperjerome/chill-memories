@@ -14,8 +14,8 @@ class EnquiryController extends Controller
 {
 
     public function index() {
-        $data = Enquiry::get();
-
+        $data = Enquiry::with('user')->get();
+// return $data;
         return view('pages.backend.enquiries.index', compact('data'));
     }
     
@@ -29,16 +29,29 @@ class EnquiryController extends Controller
         $details['mobile'] = $request->get('mobile');
         $details['destination'] = $request->get('destination');
 
+    //      // Check if user already exists 
+    // $user = User::where('email', $request->get('email'))->orWhere('mobile', $request->get('mobile'))->first();
+
+    // if (!$user) {
+    //     // If user doesn't exist, create a new user
+    //     $user = User::create([
+    //         'name' => $request->get('name'),
+    //         'email' => $request->get('email'),
+    //         'mobile' => $request->get('mobile'),
+    //         'password' => bcrypt('default_password'), // Set a default password or handle password creation separately
+    //     ]);
+    // }
+
         $user = User::create([
             'name'=>$request->get('name'),
             'email'=>$request->get('email'),
-            'mobile'=>$request->get('mobile'),
+            'password'=>$request->get('mobile'),
             'role'=>'customer',
         ]);
-        
+
         $data = new Enquiry;
 
-        $data->name = $request->get('name');
+        $data->user_id = $user->id;
         $data->email = $request->get('email');
         $data->mobile = $request->get('mobile');
         $data->destination = $request->get('destination');
