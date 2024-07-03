@@ -23,6 +23,9 @@ return new class extends Migration
             $table->date('to');
             $table->unsignedBigInteger('package_id');
             $table->string('source');
+            $table->string('payment_status')->default('null');
+            $table->string('voucher_status')->default('null');
+            $table->string('trip_status')->default('null');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

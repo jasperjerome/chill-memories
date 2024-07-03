@@ -39,10 +39,12 @@ Route::get('payment_cancel', [Paymentcontroller::class, 'payment_cancel'])->name
 
 // dashboard
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 // destinations
 Route::get('app/destinations', [DestinationController::class, 'index'])->name('app.destinations');
 Route::get('app/destinations/create', [DestinationController::class, 'create'])->name('app.destinations.create');
 Route::post('app/destinations/store', [DestinationController::class, 'store'])->name('app.destinations.store');
+Route::delete('app/destinations/delete/{id}', [DestinationController::class, 'destroy'])->name('app.destinations.delete');
 
 // packages
 Route::get('app/packages', [PackageController::class, 'index'])->name('app.packages');
@@ -67,6 +69,7 @@ Route::get('app/bookings/create_voucher/{id}', [BookingController::class, 'creat
 Route::post('app/bookings/store', [BookingController::class, 'store'])->name('app.bookings.store');
 Route::post('app/bookings/store_voucher', [BookingController::class, 'storeVoucher'])->name('app.bookings.store_voucher');
 Route::get('app/booking_details/show/{id}', [BookingController::class, 'show'])->name('app.booking_details');
+Route::post('app/booking/update_booking_status', [BookingController::class, 'updateStatus'])->name('app.update_booking_status');
 
 // as post
 Route::get('app/ad', [AdController::class, 'index'])->name('app.ad');

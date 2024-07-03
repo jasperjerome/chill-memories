@@ -10,6 +10,7 @@ use App\Models\Package;
 use App\Models\User;
 use App\Models\Voucher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class BookingController extends Controller
 {
@@ -108,6 +109,15 @@ class BookingController extends Controller
         $cabs = json_decode($data->voucher->cab, true);
 // return $data;
         return view('pages.backend.bookings.show', compact('data', 'hotel_locations', 'hotel_names', 'others', 'cabs'));
+    }
+
+    public function updateStatus(Request $request) {
+        $data = Booking::findOrFail($request->id);
+
+        $data->{$request->field} = $request->value;
+        $data->save();
+        
+        return response()->json(['success' => true]);
     }
 
 }
