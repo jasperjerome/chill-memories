@@ -14,6 +14,7 @@ class DestinationController extends Controller
     {
         $data = Destination::get();
         return view('pages.backend.destinations.index', compact('data'));
+        // return response()->json($data);
     }
 
     /**

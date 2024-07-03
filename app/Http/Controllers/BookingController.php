@@ -83,20 +83,31 @@ class BookingController extends Controller
     }
 
     public function storeVoucher(Request $request) {
+        // return $request;
         $data = new Voucher;
 
         $data->booking_id = $request->get('booking_id');
         $data->pickup_from = $request->get('pickup_from');
         $data->drop_to = $request->get('drop_to');
         $data->user_id = $request->get('user_id');
-        $data->hotel_location = $request->get('hotel_location');
-        $data->hotel_name = $request->get('hotel_name');
-        $data->other = $request->get('other');
-        $data->cab = $request->get('cab');
+        $data->hotel_location = json_encode($request->get('hotel_location'));
+        $data->hotel_name = json_encode($request->get('hotel_name'));
+        $data->other = json_encode($request->get('other'));
+        $data->cab = json_encode($request->get('cab'));
         $data->save();
 
         return redirect()->route('app.bookings')->with('create', 'Voucher Created Successfully');
         
+    }
+
+    public function show($id) {
+        $data = Booking::with(['voucher.user', 'package', 'user'])->findOrFail($id);
+        $hotel_locations = json_decode($data->voucher->hotel_location, true);
+        $hotel_names = json_decode($data->voucher->hotel_name, true);
+        $others = json_decode($data->voucher->other, true);
+        $cabs = json_decode($data->voucher->cab, true);
+// return $data;
+        return view('pages.backend.bookings.show', compact('data', 'hotel_locations', 'hotel_names', 'others', 'cabs'));
     }
 
 }

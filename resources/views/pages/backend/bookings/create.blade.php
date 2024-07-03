@@ -11,12 +11,13 @@
                 </div>
                 <div class="dashboard-profile-wrapper two">
                     <div class="dashboard-profile-tab-content">
-                        <form action="{{route('app.bookings.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('app.bookings.store_voucher')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-inner mb-30">
                                         <label>Name</label>
+                                        <input type="hidden" value="{{$data->id}}" name="booking_id">
                                         <input type="text" name="package_title" placeholder="Customer Name"
                                             value="{{$data->user->name}}">
                                     </div>

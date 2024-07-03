@@ -35,6 +35,7 @@
                                     <th>Date & Time</th>
                                     <th>Payment Status</th>
                                     <th>Voucher Status</th>
+                                    <th>Trip Status</th>
                                     <th width="60%">Actions</th>
                                 </tr>
                             </thead>
@@ -63,18 +64,21 @@
                                             </select>
                                         </td>
                                         <td>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Pending</option>
+                                                <option value="">Closed</option>
+                                                <option value="">Cancelled</option>
+                                            </select>
+                                        </td>
+                                        <td>
                                             <div class="d-flex justify-content-center align-items-center">
                                                 <a href="{{ route('app.bookings.create_voucher', ['id' => $datas->id]) }}" class="primary-btn2">Create Voucher</a>
-                                                <a href="#!" class="primary-btn2 mx-3">View Voucher</a>
-                                                <a href="#!" class="primary-btn2 mx-3">Edit Voucher</a>
+                                                <a href="{{route('app.booking_details', ['id'=>$datas->id])}}" class="primary-btn2 mx-3">View Voucher</a>
                                             </div>
                                         </td>
                                     </tr>
                                 @endforeach
                             @else
-                                <tr>
-                                    <td colspan="10" style="text-align: center;">No Datas Found</td>
-                                </tr>
                             @endif
                         </table>
                     </div>

@@ -17,10 +17,10 @@ return new class extends Migration
             $table->string('pickup_from');
             $table->string('drop_to');
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->string('hotel_location');
-            $table->string('hotel_name');
-            $table->string('other');
-            $table->string('cab');
+            $table->json('hotel_location');
+            $table->json('hotel_name');
+            $table->json('other');
+            $table->json('cab');
             $table->timestamps();
 
             $table->foreign('booking_id')->references('id')->on('bookings')->onDelete('cascade');
