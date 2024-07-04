@@ -22,21 +22,26 @@ class Destination extends Model
         'images',
     ];
 
-    public function packages() {
+    public function packages()
+    {
         return $this->hasMany(Package::class, 'destination_id');
     }
 
-    public function itinerary() {
+    public function itinerary()
+    {
         return $this->hasMany(Itinerary::class);
     }
+
     public function getFeatureImgAttribute($value)
     {
         return $value != "" ? url('') . config('global.IMG_PATH') . '/assets/uploads/feature_imgs/' . $value : '';
     }
+
     public function getBreadcrumbImgAttribute($value)
     {
         return $value != "" ? url('') . config('global.IMG_PATH') . '/assets/uploads/breadcrumb_imgs/' . $value : '';
     }
+    
     // Accessor for images attribute (array of images)
     public function getImagesAttribute($value)
     {

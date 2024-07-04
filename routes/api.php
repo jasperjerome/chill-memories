@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -9,4 +9,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::get('/destinations', [DestinationController::class, 'index']);
+Route::get('/destinations', [ApiController::class, 'destinations']);
+Route::get('/packages', [ApiController::class, 'packages']);

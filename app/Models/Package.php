@@ -33,4 +33,22 @@ class Package extends Model
     public function bookings() {
         return $this->hasMany(Booking::class, 'package_id');
     }
+    
+    // Accessor for images attribute (array of images)
+    public function getImagesAttribute($value)
+    {
+        if (!empty($value)) {
+            $images = json_decode($value, true);
+            $baseUrl = url('') . config('global.IMG_PATH') . '/assets/uploads/destination_imgs/';
+
+            // Prepend base URL to each image filename
+            foreach ($images as $key => $image) {
+                $images[$key] = $baseUrl . $image;
+            }
+
+            return $images;
+        }
+
+        return [];
+    }
 }
