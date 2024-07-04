@@ -29,4 +29,29 @@ class Destination extends Model
     public function itinerary() {
         return $this->hasMany(Itinerary::class);
     }
+    public function getFeatureImgAttribute($value)
+    {
+        return $value != "" ? url('') . config('global.IMG_PATH') . '/assets/uploads/feature_imgs/' . $value : '';
+    }
+    public function getBreadcrumbImgAttribute($value)
+    {
+        return $value != "" ? url('') . config('global.IMG_PATH') . '/assets/uploads/breadcrumb_imgs/' . $value : '';
+    }
+    // Accessor for images attribute (array of images)
+    public function getImagesAttribute($value)
+    {
+        if (!empty($value)) {
+            $images = json_decode($value, true);
+            $baseUrl = url('') . config('global.IMG_PATH') . '/assets/uploads/destination_imgs/';
+
+            // Prepend base URL to each image filename
+            foreach ($images as $key => $image) {
+                $images[$key] = $baseUrl . $image;
+            }
+
+            return $images;
+        }
+
+        return [];
+    }
 }

@@ -729,7 +729,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="total-price"><span>Total Price:</span> ₹470</div>
+                                        <div class="total-price"><span>Total Price:</span> ₹{{$data->cost}}</div>
                                         {{-- <button type="submit" class="primary-btn1 two mb-70">Book Now</button> --}}
                                         <button id="rzp-button1" class = "primary-btn1 two mb-70" ><i class="fas fa-money-bill"></i> Pay with Razorpay</button>
                                     </form>
@@ -829,7 +829,7 @@
         let options = {
     key: "{{env('RAZORPAY_API_KEY')}}",
     name: "Razorpay Testing",
-    amount : "100",
+    amount : "{{$data->cost}}",
     currency : "INR",
     description: "Test Description",
     handler: function (response) {

@@ -33886,3 +33886,17 @@ form.monkey-form .inputGroup2 #showPasswordToggle input:disabled ~ .indicator {
 form.monkey-form .inputGroup2 #showPasswordToggle input:disabled ~ .indicator:after {
     visibility: hidden;
 }
+/* .button-delete, .button-edit, .button-show {
+    padding: 4px 7px;
+    border-radius: 4px;
+    color: #fff;
+}
+.button-delete {
+    color:  #dc3545;
+}
+.button-edit {
+    color:  #ffc107;
+}
+.button-show {
+    color:  #198754;
+} */

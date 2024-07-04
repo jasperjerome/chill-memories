@@ -32,14 +32,14 @@
                     <div style="display: flex;justify-content:center;">
                         <img src="{{asset('assets/img/chill-memories-logo.jpeg')}}" style="height:70px;" alt="">
                     </div>
-                    <h1>Welcome Client Name</h1>
+                    <h1>Welcome {{ $details['name'] }}</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus<br/>
                     vel rem, nobis repudiandae cupiditate ex necessitatibus? Quod,<br/>
                     ipsam harum. Non odit consequatur officia sunt, blanditiis accusantium<br/>
                     animi adipisci autem saepe!</p>
                     <table>
                         <tr style="">
-                            <td style="width: 75%;"><h5>Destination Name</h5></td>
+                            <td style="width: 75%;"><h5>{{ $details['destination'] }}</h5></td>
                             <td style="width: 20%;"><h5>Package Name</h5></td>
                         </tr>
                     </table>
@@ -48,19 +48,19 @@
                     <h3 style="text-align: center;letter-spacing:2px;">Travel Pass</h3>
                     <table class="inner-table">
                         <tr>
-                            <td>FROM<br/><span style="font-size: 14px; color:#ff6a00;">01-01-2024</span></td>
-                            <td>TO<br/><span style="font-size: 14px; color:#ff6a00;">05-01-2024</span></td>
+                            <td>FROM<br/><span style="font-size: 14px; color:#ff6a00;">{{ $details['from'] }}</span></td>
+                            <td>TO<br/><span style="font-size: 14px; color:#ff6a00;">{{ $details['to'] }}</span></td>
                         </tr>
                         <tr>
-                            <td>No Of Pax<br/><span style="font-size: 14px; color:#ff6a00;">03 Adults</span></td>
-                            <td><span style="opacity: 0;">No Of Pax</span><br/><span style="font-size: 14px; color:#ff6a00;">02 Children</span></td>
+                            <td>No Of Pax<br/><span style="font-size: 14px; color:#ff6a00;">{{ $details['no_of_adults'] }} Adults</span></td>
+                            <td><span style="opacity: 0;">No Of Pax</span><br/><span style="font-size: 14px; color:#ff6a00;">{{ $details['no_of_children'] }} Children</span></td>
                         </tr>
                         <tr>
-                            <td colspan="2">Booking Date<br/><span style="font-size: 13px; color:#ff6a00;">01-01-2024</span></td>
+                            <td colspan="2">Booking Date<br/><span style="font-size: 13px; color:#ff6a00;">{{ today()->format('d-m-Y') }}</span></td>
                         </tr>
-                        <tr>
+                        {{-- <tr>
                             <td colspan="2">Transaction Id<br/><span style="font-size: 13px; color:#ff6a00;">pay_OS8QfvZsisZVVc</span></td>
-                        </tr>
+                        </tr> --}}
                     </table>
                 </td>
             </tr>
@@ -68,7 +68,8 @@
         <br/>
         <br/>
         <br/>
-        <table class="table-2" style="border: 2px solid #000; border-collapse:collapse; width:100%;">
+        <h1 style="text-align: center;display:none;">Trip Details</h1>
+        <table class="table-2" style="border: 2px solid #000; border-collapse:collapse; width:100%; display:none;">
             {{-- <tr>
                 <td>Booking Details</td>
             </tr> --}}

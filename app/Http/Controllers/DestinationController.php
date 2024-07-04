@@ -100,10 +100,74 @@ class DestinationController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, $id)
-    {
-        $data = Destination::findOrFail($id);
-        return redirect()->route('app.destinations')->with('update', 'Destination Updated Succesfully');
+{
+    $data = Destination::findOrFail($id);
+
+    $data->title = $request->get('title');
+    $data->wheather = $request->get('wheather');
+    $data->seo_title = $request->get('seo_title');
+    $data->meta_desc = $request->get('meta_desc');
+    $data->desc = $request->get('desc');
+    $data->long_desc = $request->get('long_desc');
+    $data->video_link = $request->get('video_link');
+
+    // feature image
+    if ($request->hasFile('feature_img')) {
+        // Delete old feature image
+        if ($data->feature_img && file_exists(public_path('assets/uploads/feature_imgs/' . $data->feature_img))) {
+            unlink(public_path('assets/uploads/feature_imgs/' . $data->feature_img));
+        }
+
+        $feature_img = $request->file('feature_img');
+        $filename = time() . '.' . $feature_img->getClientOriginalExtension();
+        $feature_img->move('assets/uploads/feature_imgs', $filename);
+        $data->feature_img = $filename;
     }
+
+    // breadcrumb image
+    if ($request->hasFile('breadcrumb_img')) {
+        // Delete old breadcrumb image
+        if ($data->breadcrumb_img && file_exists(public_path('assets/uploads/breadcrumb_imgs/' . $data->breadcrumb_img))) {
+            unlink(public_path('assets/uploads/breadcrumb_imgs/' . $data->breadcrumb_img));
+        }
+
+        $breadcrumb_img = $request->file('breadcrumb_img');
+        $filename = time() . '.' . $breadcrumb_img->getClientOriginalExtension();
+        $breadcrumb_img->move('assets/uploads/breadcrumb_imgs', $filename);
+        $data->breadcrumb_img = $filename;
+    }
+
+    // Destination images
+    if ($request->hasFile('images')) {
+        // Delete old destination images
+        $oldImages = json_decode($data->images);
+        if ($oldImages) {
+            foreach ($oldImages as $oldImage) {
+                if (file_exists(public_path('assets/uploads/destination_imgs/' . $oldImage))) {
+                    unlink(public_path('assets/uploads/destination_imgs/' . $oldImage));
+                }
+            }
+        }
+
+        $images = $request->file('images');
+        $imagePaths = [];
+
+        foreach ($images as $image) {
+            $filename = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move('assets/uploads/destination_imgs', $filename);
+            // Save the filename to the array
+            $imagePaths[] = $filename;
+        }
+
+        // Convert the image paths array to JSON
+        $imagePathsJson = json_encode($imagePaths);
+        $data->images = $imagePathsJson;
+    }
+
+    $data->save();
+
+    return redirect()->route('app.destinations')->with('update', 'Destination Updated Successfully');
+}
 
     /**
      * Remove the specified resource from storage.
@@ -114,6 +178,6 @@ class DestinationController extends Controller
 
         $data->delete();
 
-        return redirect()->route('app.destinations')->delete('delete', 'Destination Deleted Successfully');
+        return redirect()->route('app.destinations')->with('delete', 'Destination Deleted Successfully');
     }
 }

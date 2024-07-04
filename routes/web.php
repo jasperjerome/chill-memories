@@ -44,6 +44,8 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 Route::get('app/destinations', [DestinationController::class, 'index'])->name('app.destinations');
 Route::get('app/destinations/create', [DestinationController::class, 'create'])->name('app.destinations.create');
 Route::post('app/destinations/store', [DestinationController::class, 'store'])->name('app.destinations.store');
+Route::get('app/destinations/edit/{id}', [DestinationController::class, 'edit'])->name('app.destinations.edit');
+Route::put('app/destinations/update/{id}', [DestinationController::class, 'update'])->name('app.destinations.update');
 Route::delete('app/destinations/delete/{id}', [DestinationController::class, 'destroy'])->name('app.destinations.delete');
 
 // packages
@@ -86,15 +88,8 @@ Route::get('about', function() {
 Route::get('contact', function() {
     return view('pages.frontend.contact_us');
 });
-Route::get('destination_list', function() {
-    return view('pages.frontend.destination');
-});
-Route::get('package_details', function() {
-    return view('pages.frontend.package_details');
-});
-Route::get('create_booking', function() {
-    return view('pages.backend.bookings.create');
-});
+
+
 
 Route::get('des-c', function() {
     return view('pages.backend.destinations.create');

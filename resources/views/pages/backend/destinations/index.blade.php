@@ -132,7 +132,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>Destination Title</th>
-                                <th>Wheather</th>
+                                <th>Seo Title</th>
+                                <th>Meta Description</th>
                                 <th>Description</th>
                                 <th>Created</th>
                                 <th>Actions</th>
@@ -144,14 +145,15 @@
                                 <tr>
                                     <td>{{$index+1}}</td>
                                     <td><a href="{{route('destination_details', ['id'=>$datas->id])}}" class="nav-link">{{$datas->title}}</a></td>
-                                    <td>{{$datas->wheather}}</td>
+                                    <td>{{$datas->seo_title}}</td>
+                                    <td>{{$datas->meta_desc}}</td>
                                     <td>{{$datas->desc}}</td>
                                     <td>{{$datas->created_at}}</td>
                                     <td>
                                         <ul class="d-flex align-items-center action-btns">
-                                            <li class="nav-item mx-2"><a href="#!" data-bs-toggle="modal" data-bs-target="#delete_modal{{$datas->id}}" class="nav-link"> <i class="fas fa-trash"></i> </a></li>
-                                            <li class="nav-item mx-2"><a href="" class="nav-link"> <i class="fas fa-pencil-alt"></i> </a></li>
-                                            <li class="nav-item mx-2"><a href="" class="nav-link"> <i class="fa fa-eye"></i> </a></li>
+                                            <li class="nav-item mx-2 text-danger"><a href="#!" data-bs-toggle="modal" data-bs-target="#delete_modal{{$datas->id}}" class="nav-link button-delete"> <i class="fas fa-trash"></i> </a></li>
+                                            <li class="nav-item mx-2 text-primary"><a href="{{route('app.destinations.edit', ['id'=>$datas->id])}}" class="nav-link button-edit"> <i class="fas fa-pencil-alt"></i> </a></li>
+                                            <li class="nav-item mx-2 text-success"><a href="" class="nav-link button-show"> <i class="fa fa-eye"></i> </a></li>
                                         </ul>
                                     </td>
                                 </tr>

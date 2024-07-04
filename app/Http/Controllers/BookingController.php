@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Mail\BookingVisitorMail;
 use App\Models\Booking;
 use App\Models\Destination;
 use App\Models\Enquiry;
@@ -11,6 +12,7 @@ use App\Models\User;
 use App\Models\Voucher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
 {
@@ -29,26 +31,26 @@ class BookingController extends Controller
     public function store(Request $request) {
 
         // Check if user_id is set in the request
-    $user = null;
-    if ($request->has('user_id')) {
-        $user = User::find($request->get('user_id'));
-    }
-
-    // If user_id is not set or user does not exist, check if a user with the given email or mobile exists
-    if (!$user) {
-        $user = User::where('email', $request->get('email'))
-                    // ->orWhere('mobile', $request->get('mobile'))
-                    ->first();
-
-        // If no user is found, create a new user
-        if (!$user) {
-            $user = User::create([
-                'name' => $request->get('name'),
-                'email' => $request->get('email'),
-                'password' => $request->get('mobile'), // Set a default password or handle password creation separately
-            ]);
+        $user = null;
+        if ($request->has('user_id')) {
+            $user = User::find($request->get('user_id'));
         }
-    }
+
+        // If user_id is not set or user does not exist, check if a user with the given email or mobile exists
+        if (!$user) {
+            $user = User::where('email', $request->get('email'))
+                        // ->orWhere('mobile', $request->get('mobile'))
+                        ->first();
+
+            // If no user is found, create a new user
+            if (!$user) {
+                $user = User::create([
+                    'name' => $request->get('name'),
+                    'email' => $request->get('email'),
+                    'password' => $request->get('mobile'), // Set a default password or handle password creation separately
+                ]);
+            }
+        }
 
 
         // return $request;
@@ -63,8 +65,18 @@ class BookingController extends Controller
         $data->to = $request->get('to');
         $data->package_id = $request->get('package_id');
         $data->source = $request->get('source');
-        $data->save();
 
+        $details = [];
+        $details['name'] = $user->name;
+        $details['destination'] = $request->get('destination');
+        $details['from'] = $request->get('from');
+        $details['to'] = $request->get('to');
+        $details['no_of_adults'] = $request->get('no_of_adults');
+        $details['no_of_children'] = $request->get('no_of_children');
+        $details['created_at'] = $data->created_at;
+
+        $data->save();
+        Mail::to($request->email)->send(new BookingVisitorMail($details));
         return redirect()->route('app.bookings')->with('create', 'Booking Created Successfully');
     }
 
