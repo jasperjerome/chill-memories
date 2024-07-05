@@ -147,7 +147,8 @@
                     <li><a href="{{route('app.about_us')}}">About Us</a></li>
                     <li><a href="{{route('app.privacy_policy')}}">Privacy Policy</a></li>
                     <li><a href="{{route('app.terms_conditions')}}">Terms And Conditions</a></li>
-                    <li><a href="{{route('app.privacy_policy')}}">Refund Policy</a></li>
+                    <li><a href="{{route('app.refund_policy')}}">Refund Policy</a></li>
+                    <li><a href="{{route('app.refund_policy')}}">Contact Us</a></li>
                 </ul>
             </li>
             <li>

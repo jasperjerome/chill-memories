@@ -29,11 +29,11 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="index.html"><img src="{{asset('assets/img/chill-memories-logo.jpeg')}}"
+                            <a href="/"><img src="{{asset('assets/img/chill-memories-logo.jpeg')}}"
                                     alt=""></a>
                         </div>
                         <h3>Want <span>to Take <br></span> Tour Packages<span>?</span></h3>
-                        <a href="package-grid.html" class="primary-btn1">Book A Tour</a>
+                        <a href="{{route('packages')}}" class="primary-btn1">Book A Trip</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6 d-flex justify-content-lg-center justify-content-sm-start">
@@ -43,10 +43,10 @@
                         </div>
                         <ul class="widget-list">
                             <li><a href="about.html">About Us</a></li>
-                            <li><a href="javascript:void(0)">Destinations</a></li>
-                            <li><a href="vjavascript:void(0)">Tour Package</a></li>
-                            <li><a href="javascript:void(0)">Tour Guide</a></li>
-                            <li><a href="javascript:void(0)">Article</a></li>
+                            <li><a href="{{route('destinations')}}">Destinations</a></li>
+                            <li><a href="v{{route('packages')}}">Packages</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>

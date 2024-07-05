@@ -11,7 +11,9 @@ use App\Http\Controllers\PackageController;
 use App\Http\Controllers\Paymentcontroller;;
 use App\Http\Controllers\Usercontroller;
 use App\Http\Controllers\web\AboutusController;
+use App\Http\Controllers\web\ContactusController;
 use App\Http\Controllers\web\PrivacypolicyController;
+use App\Http\Controllers\web\RefundpolicyController;
 use App\Http\Controllers\web\TermsconditionsController;
 use Illuminate\Support\Facades\Route;
 
@@ -108,6 +110,22 @@ Route::post('app/terms_conditions/store', [TermsconditionsController::class, 'st
 Route::get('app/terms_conditions/edit/{id}', [TermsconditionsController::class, 'edit'])->name('app.terms_conditions.edit');
 Route::put('app/terms_conditions/update/{id}', [TermsconditionsController::class, 'update'])->name('app.terms_conditions.update');
 Route::delete('app/terms_conditions/delete/{id}', [TermsconditionsController::class, 'delete'])->name('app.terms_conditions.delete');
+
+// refund policy
+Route::get('app/refund_policy', [RefundpolicyController::class, 'index'])->name('app.refund_policy');
+Route::get('app/refund_policy/create', [RefundpolicyController::class, 'create'])->name('app.refund_policy.create');
+Route::post('app/refund_policy/store', [RefundpolicyController::class, 'store'])->name('app.refund_policy.store');
+Route::get('app/refund_policy/edit/{id}', [RefundpolicyController::class, 'edit'])->name('app.refund_policy.edit');
+Route::put('app/refund_policy/update/{id}', [RefundpolicyController::class, 'update'])->name('app.refund_policy.update');
+Route::delete('app/refund_policy/delete/{id}', [RefundpolicyController::class, 'delete'])->name('app.refund_policy.delete');
+
+// contact us
+Route::get('app/contact_us', [ContactusController::class, 'index'])->name('app.contact_us');
+Route::get('app/contact_us/create', [ContactusController::class, 'create'])->name('app.contact_us.create');
+Route::post('app/contact_us/store', [ContactusController::class, 'store'])->name('app.contact_us.store');
+Route::get('app/contact_us/edit/{id}', [ContactusController::class, 'edit'])->name('app.contact_us.edit');
+Route::put('app/contact_us/update/{id}', [ContactusController::class, 'update'])->name('app.contact_us.update');
+Route::delete('app/contact_us/delete/{id}', [ContactusController::class, 'delete'])->name('app.contact_us.delete');
 
 Route::get('/index', function() {
     return view('pages.frontend.index');

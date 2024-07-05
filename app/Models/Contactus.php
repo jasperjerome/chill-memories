@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Refundpolicy extends Model
+class Contactus extends Model
 {
     use HasFactory;
 
-    protected $table = 'refund_policy';
-    protected $fillable = [
-        'title',
-        'desc'
+    protected $table = 'contact_us';
+    protected $filable = [
+        'mobile',
+        'email',
+        'address',
     ];
 }

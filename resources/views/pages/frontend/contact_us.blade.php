@@ -41,7 +41,6 @@
                         </div>
                         <div class="content">
                             <h6><a href="tel:+919874563210">+919874563210</a></h6>
-                            <h6><a href="tel:+919874563210">+919874563210</a></h6>
                         </div>
                     </div>
                     <div class="single-contact mb-40">
@@ -56,14 +55,7 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h6><a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9dcc1d8d4c9d5dc97dad6d4"><span
-                                        class="__cf_email__"
-                                        data-cfemail="5c35323a331c39243d312c3039723f3331">[email&#160;protected]</span></a>
-                            </h6>
-                            <h6><a href="/cdn-cgi/l/email-protection#91f4e9f0fce1fdf4d1f4e9f0fce1fdf4bff2fefc"><span
-                                        class="__cf_email__"
-                                        data-cfemail="ff9a879e928f939abf9a879e928f939ad19c9092">[email&#160;protected]</span></a>
-                            </h6>
+                            <h6><a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9dcc1d8d4c9d5dc97dad6d4"><span class="__cf_email__" data-cfemail="5c35323a331c39243d312c3039723f3331">[email&#160;protected]</span></a></h6>
                         </div>
                     </div>
                     <div class="single-contact mb-40">

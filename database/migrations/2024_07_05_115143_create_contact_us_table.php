@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('refund_policy', function (Blueprint $table) {
+        Schema::create('contact_us', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->longText('desc');
+            $table->string('mobile');
+            $table->string('email');
+            $table->string('address');
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('refund_policy');
+        Schema::dropIfExists('contact_us');
     }
 };
