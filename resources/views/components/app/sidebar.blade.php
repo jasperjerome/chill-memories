@@ -145,9 +145,9 @@
                 <i class="bi bi-plus dropdown-icon"></i>
                 <ul class="sub-menu" style="display: none;">
                     <li><a href="{{route('app.about_us')}}">About Us</a></li>
-                    <li><a href="#!">Privacy Policy</a></li>
-                    <li><a href="#!">Terms & Conditions</a></li>
-                    <li><a href="#!">Refund Policy</a></li>
+                    <li><a href="{{route('app.privacy_policy')}}">Privacy Policy</a></li>
+                    <li><a href="{{route('app.terms_conditions')}}">Terms And Conditions</a></li>
+                    <li><a href="{{route('app.privacy_policy')}}">Refund Policy</a></li>
                 </ul>
             </li>
             <li>

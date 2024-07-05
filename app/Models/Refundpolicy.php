@@ -5,13 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Privacypolicy extends Model
+class Refundpolicy extends Model
 {
     use HasFactory;
-
-    protected $table = 'privacy_policy';
-    protected $fillable = [
-        'title',
-        'desc'
-    ];
 }

@@ -8,14 +8,17 @@ use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\PackageController;
-use App\Http\Controllers\Paymentcontroller;
+use App\Http\Controllers\Paymentcontroller;;
 use App\Http\Controllers\Usercontroller;
 use App\Http\Controllers\web\AboutusController;
+use App\Http\Controllers\web\PrivacypolicyController;
+use App\Http\Controllers\web\TermsconditionsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('booking', function() {
     return view('emails.bookings.booking_confirm_1');
@@ -89,6 +92,22 @@ Route::post('app/about_us/store', [AboutusController::class, 'store'])->name('ap
 Route::get('app/about_us/edit/{id}', [AboutusController::class, 'edit'])->name('app.about_us.edit');
 Route::put('app/about_us/update/{id}', [AboutusController::class, 'update'])->name('app.about_us.update');
 Route::delete('app/about_us/delete/{id}', [AboutusController::class, 'delete'])->name('app.about_us.delete');
+
+// privacy policy
+Route::get('app/privacy_policy', [PrivacypolicyController::class, 'index'])->name('app.privacy_policy');
+Route::get('app/privacy_policy/create', [PrivacypolicyController::class, 'create'])->name('app.privacy_policy.create');
+Route::post('app/privacy_policy/store', [PrivacypolicyController::class, 'store'])->name('app.privacy_policy.store');
+Route::get('app/privacy_policy/edit/{id}', [PrivacypolicyController::class, 'edit'])->name('app.privacy_policy.edit');
+Route::put('app/privacy_policy/update/{id}', [PrivacypolicyController::class, 'update'])->name('app.privacy_policy.update');
+Route::delete('app/privacy_policy/delete/{id}', [PrivacypolicyController::class, 'delete'])->name('app.privacy_policy.delete');
+
+// Terms And Conditions
+Route::get('app/terms_conditions', [TermsconditionsController::class, 'index'])->name('app.terms_conditions');
+Route::get('app/terms_conditions/create', [TermsconditionsController::class, 'create'])->name('app.terms_conditions.create');
+Route::post('app/terms_conditions/store', [TermsconditionsController::class, 'store'])->name('app.terms_conditions.store');
+Route::get('app/terms_conditions/edit/{id}', [TermsconditionsController::class, 'edit'])->name('app.terms_conditions.edit');
+Route::put('app/terms_conditions/update/{id}', [TermsconditionsController::class, 'update'])->name('app.terms_conditions.update');
+Route::delete('app/terms_conditions/delete/{id}', [TermsconditionsController::class, 'delete'])->name('app.terms_conditions.delete');
 
 Route::get('/index', function() {
     return view('pages.frontend.index');
