@@ -50,7 +50,7 @@ class User extends Authenticatable
         return $this->hasMany(Enquiry::class, 'user_id');
     }
     public function bookings() {
-        return $this->hasMany(User::class, 'user_id');
+        return $this->hasMany(Booking::class, 'user_id');
     }
     public function voucher() {
         return $this->hasMany(Voucher::class, 'user_id');

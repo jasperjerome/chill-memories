@@ -23,6 +23,9 @@ Route::get('booking', function() {
 // customer registration
 Route::post('customer_create', [Usercontroller::class, 'customerCreate'])->name('customer_create');
 Route::get('customers', [Usercontroller::class, 'customers'])->name('customers');
+Route::get('customers_details/{id}', [Usercontroller::class, 'customerDetails'])->name('customers_details');
+Route::get('users', [Usercontroller::class, 'users'])->name('users');
+Route::post('user_create', [Usercontroller::class, 'userCreate'])->name('user_create');
 
 // frontend routes
 Route::get('fe_home', [FrontendController::class, 'index'])->name('fe_home');

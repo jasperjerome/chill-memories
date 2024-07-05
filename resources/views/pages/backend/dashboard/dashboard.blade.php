@@ -6,7 +6,7 @@
         <div class="col-xl-12">
             <div class="main-content-title-profile mb-50">
                 <div class="main-content-title">
-                    <h3>Hi, Admin! </h3>
+                    <h3>Hi {{Auth::user()->name}}, </h3>
                 </div>
                 {{-- <div class="profile">
                     <a href="#">
@@ -41,7 +41,7 @@
                                 </svg>
                             </div>
                             <div class="counter-content">
-                                <p>Total Tour</p>
+                                <p>Total Bookings</p>
                                 <div class="number">
                                     <h3 class="counter">1530</h3>
                                     <span>+</span>
@@ -62,7 +62,7 @@
                                 </svg>
                             </div>
                             <div class="counter-content">
-                                <p>Total Hotel</p>
+                                <p>Total Enquiries</p>
                                 <div class="number">
                                     <h3 class="counter">263</h3>
                                     <span>+</span>
@@ -123,7 +123,7 @@
                                 </svg>
                             </div>
                             <div class="counter-content">
-                                <p>Total Transport</p>
+                                <p>Closed Trips</p>
                                 <div class="number">
                                     <h3 class="counter">82</h3>
                                     <span>+</span>
@@ -142,7 +142,7 @@
                                 </svg>
                             </div>
                             <div class="counter-content">
-                                <p>Total Visa</p>
+                                <p>Total Packages</p>
                                 <div class="number">
                                     <h3 class="counter">720</h3>
                                     <span>+</span>
@@ -161,7 +161,7 @@
                                 </svg>
                             </div>
                             <div class="counter-content">
-                                <p>Total Activities</p>
+                                <p>Upcoming Trips</p>
                                 <div class="number">
                                     <h3 class="counter">70</h3>
                                     <span>+</span>

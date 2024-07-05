@@ -148,8 +148,8 @@
                                     {{-- <td>{{$data->destination_id}}</td> --}}
                                     <td>{{$datas->package_title}}</td>
                                     <td>{{$datas->cost}}</td>
-                                    <td><img src="{{asset('assets/uploads/breadcrumb_imgs/' .$datas->breadcrumb_img)}}" alt="" style="height: 100px"></td>
-                                    <td><img src="{{asset('assets/uploads/feature_imgs/' .$datas->feature_img)}}" alt="" style="height: 100px"></td>
+                                    <td><img src="{{asset('assets/uploads/breadcrumb_imgs/' .$datas->breadcrumb_img)}}" alt="" style="height: 80px"></td>
+                                    <td><img src="{{asset('assets/uploads/feature_imgs/' .$datas->feature_img)}}" alt="" style="height: 80px"></td>
                                     <td>{{$datas->created_at}}</td>
                                     <td>
                                         <ul class="d-flex align-items-center action-btns">

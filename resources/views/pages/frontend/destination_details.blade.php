@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="breadcrumb-section"
-style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url({{asset('assets/uploads/breadcrumb_imgs/' .$data->breadcrumb_img)}});">
+style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url({{$data->breadcrumb_img)}});">
 <div class="container">
     <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
@@ -27,11 +27,11 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
             <p>{{$data->desc}}</p>
             <div class="destination-gallery mb-40 mt-40">
                 <div class="row g-4">
-                    @foreach (json_decode($data->images) as $image)
+                    @foreach ($data->images as $image)
                     <div class="col-lg-4 col-sm-6">
                         <div class="gallery-img-wrap">
-                            <img src="{{asset('assets/uploads/destination_imgs/' .$image)}}" alt="">
-                            <a data-fancybox="gallery-01" href="{{asset('assets/uploads/destination_imgs/' .$image)}}"><i
+                            <img src="{{$image}}" alt="">
+                            <a data-fancybox="gallery-01" href="{{$image}}"><i
                                     class="bi bi-eye"></i> Discover Island</a>
                         </div>
                     </div>
@@ -153,7 +153,7 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
                                             <span>{{$package->cost}}</span>
                                             <p>TAXES INCL/PERS</p>
                                         </div>
-                                        <a href="package-details.html" class="primary-btn2">Book a Trip
+                                        <a href="{{route('package_details', ['id'=>$package->id])}}" class="primary-btn2">Book a Trip
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 viewbox="0 0 18 18" fill="none">
                                                 <path
@@ -176,7 +176,7 @@ style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0
             </div>
         </div>
         <div class="col-lg-12 d-flex align-items-center justify-content-center">
-            <a href="package-grid.html" class="secondary-btn4">View All Package</a>
+            <a href="{{route('packages')}}" class="secondary-btn4">View All Package</a>
         </div>
     </div>
 </div>

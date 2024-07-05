@@ -6,10 +6,10 @@
         <div class="col-xl-12">
             
             <div class="recent-listing-area">
-                {{-- <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-end">
                     <a href="" class="secondary-btn1 two mb-30">Create</a>
-                </div> --}}
-                <h6>Customers</h6>
+                </div>
+                <h6>Co - Ordinators</h6>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -27,7 +27,7 @@
                                         <td>{{$datas->name}}</td>
                                         <td>{{$datas->email}}</td>
                                         <td>{{$datas->created_at->format('d-m-Y')}}</td>
-                                        <td><a href="{{route('customers_details',['id'=>$datas->id])}}" class="primary-btn2">View Details</a></td>
+                                        <td></td>
                                     </tr>
                                 @endforeach
                             @endif

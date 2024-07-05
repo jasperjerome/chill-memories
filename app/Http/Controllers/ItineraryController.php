@@ -14,7 +14,7 @@ class ItineraryController extends Controller
     public function index()
     {
         $data = Itinerary::with('destination')->get();
-
+// return $data;
         return view('pages.backend.itinerary.index', compact('data'));
     }
 

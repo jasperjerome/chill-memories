@@ -47,12 +47,12 @@
                 <div class="co-lg-12">
                     <div class="package-img-group mb-50">
                         <div class="row align-items-center g-3">
-                            @foreach (json_decode($data->images) as $index => $image)
+                            @foreach ($data->images as $index => $image)
                                 @if ($index ==0)
                                 <div class="col-lg-6">
                                     <div class="gallery-img-wrap">
-                                        <img src="{{asset('assets/uploads/destination_imgs/' .$image)}}" alt="">
-                                        <a data-fancybox="gallery-01" href="{{asset('assets/img/innerpage/package-01.jpg')}}"><i
+                                        <img src="{{$image}}" alt="">
+                                        <a data-fancybox="gallery-01" href="{{$image}}"><i
                                                 class="bi bi-eye"></i></a>
                                     </div>
                                 </div>
@@ -61,12 +61,12 @@
                             
                             <div class="col-lg-6 h-100">
                                 <div class="row g-3 h-100">
-                                    @foreach (json_decode($data->images) as $index => $iamge)
+                                    @foreach ($data->images as $index => $iamge)
                                         @if ($index != 0)
                                             <div class="col-6">
                                                 <div class="gallery-img-wrap">
-                                                    <img src="{{asset('assets/uploads/destination_imgs/' .$image)}}" alt="">
-                                                    <a data-fancybox="gallery-01" href="{{asset('assets/img/innerpage/package-03.jpg')}}"><i
+                                                    <img src="{{$image}}" alt="">
+                                                    <a data-fancybox="gallery-01" href="{{$image}}"><i
                                                             class="bi bi-eye"></i></a>
                                                 </div>
                                             </div>

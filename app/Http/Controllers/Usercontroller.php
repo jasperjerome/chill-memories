@@ -26,12 +26,25 @@ class Usercontroller extends Controller
         return redirect()->back()->with('create', 'logged in Successfully');
     }
 
+    public function customerDetails($id) {
+        $data = User::with('bookings.voucher.user', 'bookings.package.destination')->findOrFail($id);
+        // return $data;
+        return view('pages.backend.customers.show', compact('data'));
+    }
+
+    public function users() {
+        $data = User::where('role', 'co-ordinator')->get();
+        return view('pages.backend.users.index', compact('data'));
+    }
+
     public function userCreate(Request $request) {
         $data = new User;
 
         $data->name = $request->get('name');
         $data->email = $request->get('email');
         $data->password = $request->get('password');
-        $data->name = 'co-ordinator';
+        $data->role = 'co-ordinator';
+
+        return redirect()->route('users')->with('create', 'Co-ordinator Created Successfully');
     }
 }

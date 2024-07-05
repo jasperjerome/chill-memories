@@ -143,7 +143,7 @@
                                 @foreach ($data as $index => $datas)
                                 <tr>
                                     <td>{{$index+1}}</td>
-                                    <td>wewewe</td>
+                                    <td>{{$datas->destination->title}}</td>
                                     <td>{{$datas->title}}</td>
                                     <td>{{$datas->desc}}</td>
                                     <td>{{$datas->created_at->format('d-m-Y')}}</td>
@@ -159,39 +159,6 @@
                             @endif
                         </tbody>
                     </table>
-                    <div class="pagination-area">
-                        <ul class="paginations">
-                            <li class="page-item active">
-                                <a href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#">3</a>
-                            </li>
-                        </ul>
-                        <ul class="paginations-buttons">
-                            <li>
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14"
-                                        viewbox="0 0 7 14">
-                                        <path d="M0 7.00008L7 0L2.54545 7.00008L7 14L0 7.00008Z"></path>
-                                    </svg>
-                                    Prev
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Next
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14"
-                                        viewbox="0 0 7 14" fill="none">
-                                        <path d="M7 7.00008L0 0L4.45455 7.00008L0 14L7 7.00008Z"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
