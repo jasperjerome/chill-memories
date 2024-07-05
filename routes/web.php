@@ -10,6 +10,7 @@ use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\Paymentcontroller;
 use App\Http\Controllers\Usercontroller;
+use App\Http\Controllers\web\AboutusController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -81,6 +82,13 @@ Route::get('app/ad', [AdController::class, 'index'])->name('app.ad');
 Route::get('app/ad/create', [AdController::class, 'create'])->name('app.ad.create');
 Route::post('app/ad/store', [AdController::class, 'store'])->name('app.ad.store');
 
+// about us
+Route::get('app/about_us', [AboutusController::class, 'index'])->name('app.about_us');
+Route::get('app/about_us/create', [AboutusController::class, 'create'])->name('app.about_us.create');
+Route::post('app/about_us/store', [AboutusController::class, 'store'])->name('app.about_us.store');
+Route::get('app/about_us/edit/{id}', [AboutusController::class, 'edit'])->name('app.about_us.edit');
+Route::put('app/about_us/update/{id}', [AboutusController::class, 'update'])->name('app.about_us.update');
+Route::delete('app/about_us/delete/{id}', [AboutusController::class, 'delete'])->name('app.about_us.delete');
 
 Route::get('/index', function() {
     return view('pages.frontend.index');

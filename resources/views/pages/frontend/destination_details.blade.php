@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="breadcrumb-section"
-style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url({{$data->breadcrumb_img)}});">
+style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url({{$data->breadcrumb_img}});">
 <div class="container">
     <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">

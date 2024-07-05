@@ -144,7 +144,7 @@
                 </a>
                 <i class="bi bi-plus dropdown-icon"></i>
                 <ul class="sub-menu" style="display: none;">
-                    <li><a href="#!">About Us</a></li>
+                    <li><a href="{{route('app.about_us')}}">About Us</a></li>
                     <li><a href="#!">Privacy Policy</a></li>
                     <li><a href="#!">Terms & Conditions</a></li>
                     <li><a href="#!">Refund Policy</a></li>

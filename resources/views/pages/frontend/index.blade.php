@@ -31,7 +31,7 @@
                                             flexible booking options, so you can reschedule or modify your trip with
                                             ease.</p>
                                         <div class="banner-content-bottom">
-                                            <a href="package-grid.html" class="primary-btn1">Book A Trip </a>
+                                            <a href="{{route('packages')}}" class="primary-btn1">Book A Trip </a>
 
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@
                                             flexible booking options, so you can reschedule or modify your trip with
                                             ease.</p>
                                         <div class="banner-content-bottom">
-                                            <a href="package-grid.html" class="primary-btn1">Book A Trip </a>
+                                            <a href="{{route('packages')}}" class="primary-btn1">Book A Trip </a>
 
                                         </div>
                                     </div>
@@ -101,7 +101,7 @@
                                             flexible booking options, so you can reschedule or modify your trip with
                                             ease.</p>
                                         <div class="banner-content-bottom">
-                                            <a href="package-grid.html" class="primary-btn1">Book A Trip </a>
+                                            <a href="{{route('packages')}}" class="primary-btn1">Book A Trip </a>
 
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@
                                             flexible booking options, so you can reschedule or modify your trip with
                                             ease.</p>
                                         <div class="banner-content-bottom">
-                                            <a href="package-grid.html" class="primary-btn1">Book A Trip </a>
+                                            <a href="{{route('packages')}}" class="primary-btn1">Book A Trip </a>
 
                                         </div>
                                     </div>
@@ -1789,8 +1789,8 @@
                                                     </path>
                                                 </svg>
                                                 <ul class="location-list">
-                                                    <li><a href="package-grid.html">Kashmir</a></li>
-                                                    <!-- <li><a href="package-grid.html"></a></li> -->
+                                                    <li><a href="{{route('packages')}}">Kashmir</a></li>
+                                                    <!-- <li><a href="{{route('packages')}}"></a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -1800,12 +1800,12 @@
                                             <h5><a href="package-details.html">Kashmir</a></h5>
                                             <div class="location-area">
                                                 <ul class="location-list scrollTextAni">
-                                                    <li><a href="package-grid.html">Alexandria</a></li>
-                                                    <li><a href="package-grid.html">Sharm El Sheikh</a></li>
-                                                    <li><a href="package-grid.html">Mansoura</a></li>
-                                                    <li><a href="package-grid.html">Karachi</a></li>
-                                                    <li><a href="package-grid.html">Lahore</a></li>
-                                                    <li><a href="package-grid.html">Islamabad</a></li>
+                                                    <li><a href="{{route('packages')}}">Alexandria</a></li>
+                                                    <li><a href="{{route('packages')}}">Sharm El Sheikh</a></li>
+                                                    <li><a href="{{route('packages')}}">Mansoura</a></li>
+                                                    <li><a href="{{route('packages')}}">Karachi</a></li>
+                                                    <li><a href="{{route('packages')}}">Lahore</a></li>
+                                                    <li><a href="{{route('packages')}}">Islamabad</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1845,8 +1845,8 @@
                                                     </path>
                                                 </svg>
                                                 <ul class="location-list">
-                                                    <li><a href="package-grid.html">Shimla</a></li>
-                                                    <!-- <li><a href="package-grid.html">Turkey Tour</a></li> -->
+                                                    <li><a href="{{route('packages')}}">Shimla</a></li>
+                                                    <!-- <li><a href="{{route('packages')}}">Turkey Tour</a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -1856,12 +1856,12 @@
                                             <h5><a href="package-details.html">Shimla</a></h5>
                                             <div class="location-area">
                                                 <ul class="location-list scrollTextAni">
-                                                    <li><a href="package-grid.html">Mecca</a></li>
-                                                    <li><a href="package-grid.html">Medina</a></li>
-                                                    <li><a href="package-grid.html">Riyadh</a></li>
-                                                    <li><a href="package-grid.html">Doha</a></li>
-                                                    <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                    <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                    <li><a href="{{route('packages')}}">Mecca</a></li>
+                                                    <li><a href="{{route('packages')}}">Medina</a></li>
+                                                    <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                    <li><a href="{{route('packages')}}">Doha</a></li>
+                                                    <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                    <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1901,8 +1901,8 @@
                                                     </path>
                                                 </svg>
                                                 <ul class="location-list">
-                                                    <li><a href="package-grid.html">Manali</a></li>
-                                                    <!-- <li><a href="package-grid.html">Coorg Tour</a></li> -->
+                                                    <li><a href="{{route('packages')}}">Manali</a></li>
+                                                    <!-- <li><a href="{{route('packages')}}">Coorg Tour</a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -1912,12 +1912,12 @@
                                             <h5><a href="package-details.html">Manali.</a></h5>
                                             <div class="location-area">
                                                 <ul class="location-list scrollTextAni">
-                                                    <li><a href="package-grid.html">Alexandria</a></li>
-                                                    <li><a href="package-grid.html">Sharm El Sheikh</a></li>
-                                                    <li><a href="package-grid.html">Mansoura</a></li>
-                                                    <li><a href="package-grid.html">Karachi</a></li>
-                                                    <li><a href="package-grid.html">Lahore</a></li>
-                                                    <li><a href="package-grid.html">Islamabad</a></li>
+                                                    <li><a href="{{route('packages')}}">Alexandria</a></li>
+                                                    <li><a href="{{route('packages')}}">Sharm El Sheikh</a></li>
+                                                    <li><a href="{{route('packages')}}">Mansoura</a></li>
+                                                    <li><a href="{{route('packages')}}">Karachi</a></li>
+                                                    <li><a href="{{route('packages')}}">Lahore</a></li>
+                                                    <li><a href="{{route('packages')}}">Islamabad</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1957,8 +1957,8 @@
                                                     </path>
                                                 </svg>
                                                 <ul class="location-list">
-                                                    <li><a href="package-grid.html">Delhi</a></li>
-                                                    <!-- <li><a href="package-grid.html">Japan Tour</a></li> -->
+                                                    <li><a href="{{route('packages')}}">Delhi</a></li>
+                                                    <!-- <li><a href="{{route('packages')}}">Japan Tour</a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -1968,12 +1968,12 @@
                                             <h5><a href="package-details.html">Delhi - Agra</a></h5>
                                             <div class="location-area">
                                                 <ul class="location-list scrollTextAni">
-                                                    <li><a href="package-grid.html">Bangalore</a></li>
-                                                    <li><a href="package-grid.html">Chennai</a></li>
-                                                    <li><a href="package-grid.html">New Delhi</a></li>
-                                                    <li><a href="package-grid.html">Dhaka</a></li>
-                                                    <li><a href="package-grid.html">Rangpur</a></li>
-                                                    <li><a href="package-grid.html">Sylhet</a></li>
+                                                    <li><a href="{{route('packages')}}">Bangalore</a></li>
+                                                    <li><a href="{{route('packages')}}">Chennai</a></li>
+                                                    <li><a href="{{route('packages')}}">New Delhi</a></li>
+                                                    <li><a href="{{route('packages')}}">Dhaka</a></li>
+                                                    <li><a href="{{route('packages')}}">Rangpur</a></li>
+                                                    <li><a href="{{route('packages')}}">Sylhet</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -2013,8 +2013,8 @@
                                                     </path>
                                                 </svg>
                                                 <ul class="location-list">
-                                                    <li><a href="package-grid.html">Goa</a></li>
-                                                    <!-- <li><a href="package-grid.html">Hungary Tour</a></li> -->
+                                                    <li><a href="{{route('packages')}}">Goa</a></li>
+                                                    <!-- <li><a href="{{route('packages')}}">Hungary Tour</a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -2024,12 +2024,12 @@
                                             <h5><a href="package-details.html">Goa</a></h5>
                                             <div class="location-area">
                                                 <ul class="location-list scrollTextAni">
-                                                    <li><a href="package-grid.html">Paris</a></li>
-                                                    <li><a href="package-grid.html">Marseille</a></li>
-                                                    <li><a href="package-grid.html">Bordeaux</a></li>
-                                                    <li><a href="package-grid.html">Madrid</a></li>
-                                                    <li><a href="package-grid.html">Barcelona</a></li>
-                                                    <li><a href="package-grid.html">Valencia</a></li>
+                                                    <li><a href="{{route('packages')}}">Paris</a></li>
+                                                    <li><a href="{{route('packages')}}">Marseille</a></li>
+                                                    <li><a href="{{route('packages')}}">Bordeaux</a></li>
+                                                    <li><a href="{{route('packages')}}">Madrid</a></li>
+                                                    <li><a href="{{route('packages')}}">Barcelona</a></li>
+                                                    <li><a href="{{route('packages')}}">Valencia</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -2069,8 +2069,8 @@
                                                     </path>
                                                 </svg>
                                                 <ul class="location-list">
-                                                    <li><a href="package-grid.html">Andaman</a></li>
-                                                    <!-- <li><a href="package-grid.html">Indonesia Tour </a></li> -->
+                                                    <li><a href="{{route('packages')}}">Andaman</a></li>
+                                                    <!-- <li><a href="{{route('packages')}}">Indonesia Tour </a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -2080,12 +2080,12 @@
                                             <h5><a href="package-details.html">Andaman</a></h5>
                                             <div class="location-area">
                                                 <ul class="location-list scrollTextAni">
-                                                    <li><a href="package-grid.html">Kathmandu</a></li>
-                                                    <li><a href="package-grid.html">Pokhara</a></li>
-                                                    <li><a href="package-grid.html">Lalitpur</a></li>
-                                                    <li><a href="package-grid.html">Jakarta</a></li>
-                                                    <li><a href="package-grid.html">Surabaya</a></li>
-                                                    <li><a href="package-grid.html">Bandung</a></li>
+                                                    <li><a href="{{route('packages')}}">Kathmandu</a></li>
+                                                    <li><a href="{{route('packages')}}">Pokhara</a></li>
+                                                    <li><a href="{{route('packages')}}">Lalitpur</a></li>
+                                                    <li><a href="{{route('packages')}}">Jakarta</a></li>
+                                                    <li><a href="{{route('packages')}}">Surabaya</a></li>
+                                                    <li><a href="{{route('packages')}}">Bandung</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -2558,8 +2558,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Coorg</a></li>
-                                                            <!-- <li><a href="package-grid.html">Indonesia Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Coorg</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Indonesia Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2571,12 +2571,12 @@
                                                             and Culture.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Mecca</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Doha</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Mecca</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Doha</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2618,8 +2618,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Coorg</a></li>
-                                                            <!-- <li><a href="package-grid.html">Wayanad Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Coorg</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Wayanad Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2631,12 +2631,12 @@
                                                             Mystical Travel.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2678,8 +2678,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Coorg</a></li>
-                                                            <!-- <li><a href="package-grid.html">Japan Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Coorg</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Japan Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2690,12 +2690,12 @@
                                                             Exploring Travels Outdoors.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2737,8 +2737,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Coorg</a></li>
-                                                            <!-- <li><a href="package-grid.html">Hungary Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Coorg</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Hungary Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2750,12 +2750,12 @@
                                                             and Culture.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2797,8 +2797,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Coorg</a></li>
-                                                            <!-- <li><a href="package-grid.html">Wayanad Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Coorg</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Wayanad Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2810,12 +2810,12 @@
                                                             Mystical Travel.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2854,7 +2854,7 @@
                                                 </path>
                                             </svg>
                                         </div>
-                                        <a href="package-grid.html" class="secondary-btn1">View All Package</a>
+                                        <a href="{{route('packages')}}" class="secondary-btn1">View All Package</a>
                                         <div class="slider-btn package-card-tab-next">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="9"
                                                 height="17" viewbox="0 0 9 17" fill="none">
@@ -2886,8 +2886,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Kerala</a></li>
-                                                            <!-- <li><a href="package-grid.html">Indonesia Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Kerala</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Indonesia Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2899,12 +2899,12 @@
                                                             and Culture.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Mecca</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Doha</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Mecca</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Doha</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2946,8 +2946,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Kerala</a></li>
-                                                            <!-- <li><a href="package-grid.html">Wayanad Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Kerala</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Wayanad Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2959,12 +2959,12 @@
                                                             Mystical Travel.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3006,8 +3006,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Kerala</a></li>
-                                                            <!-- <li><a href="package-grid.html">Japan Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Kerala</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Japan Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3018,12 +3018,12 @@
                                                             Exploring Travels Outdoors.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3065,8 +3065,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Kerala</a></li>
-                                                            <!-- <li><a href="package-grid.html">Hungary Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Kerala</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Hungary Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3078,12 +3078,12 @@
                                                             and Culture.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3122,7 +3122,7 @@
                                                 </path>
                                             </svg>
                                         </div>
-                                        <a href="package-grid.html" class="secondary-btn1">View All Package</a>
+                                        <a href="{{route('packages')}}" class="secondary-btn1">View All Package</a>
                                         <div class="slider-btn package-card-tab-next">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="9"
                                                 height="17" viewbox="0 0 9 17" fill="none">
@@ -3154,8 +3154,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Wayanad</a></li>
-                                                            <!-- <li><a href="package-grid.html">Indonesia Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Wayanad</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Indonesia Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3167,12 +3167,12 @@
                                                             and Culture.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Mecca</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Doha</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Mecca</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Doha</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3214,8 +3214,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Wayanad</a></li>
-                                                            <!-- <li><a href="package-grid.html">Wayanad Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Wayanad</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Wayanad Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3227,12 +3227,12 @@
                                                             Mystical Travel.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3274,8 +3274,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Wayanad</a></li>
-                                                            <!-- <li><a href="package-grid.html">Japan Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Wayanad</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Japan Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3286,12 +3286,12 @@
                                                             Exploring Travels Outdoors.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3330,7 +3330,7 @@
                                                 </path>
                                             </svg>
                                         </div>
-                                        <a href="package-grid.html" class="secondary-btn1">View All Package</a>
+                                        <a href="{{route('packages')}}" class="secondary-btn1">View All Package</a>
                                         <div class="slider-btn package-card-tab-next">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="9"
                                                 height="17" viewbox="0 0 9 17" fill="none">
@@ -3362,8 +3362,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Kodaikanal</a></li>
-                                                            <!-- <li><a href="package-grid.html">Indonesia Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Kodaikanal</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Indonesia Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3375,12 +3375,12 @@
                                                             and Culture.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Mecca</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Doha</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Mecca</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Doha</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3422,8 +3422,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Kodaikanal</a></li>
-                                                            <!-- <li><a href="package-grid.html">Wayanad Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Kodaikanal</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Wayanad Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3435,12 +3435,12 @@
                                                             Mystical Travel.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3482,8 +3482,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Kodaikanal</a></li>
-                                                            <!-- <li><a href="package-grid.html">Japan Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Kodaikanal</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Japan Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3494,12 +3494,12 @@
                                                             Exploring Travels Outdoors.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3538,7 +3538,7 @@
                                                 </path>
                                             </svg>
                                         </div>
-                                        <a href="package-grid.html" class="secondary-btn1">View All Package</a>
+                                        <a href="{{route('packages')}}" class="secondary-btn1">View All Package</a>
                                         <div class="slider-btn package-card-tab-next">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="9"
                                                 height="17" viewbox="0 0 9 17" fill="none">
@@ -3570,8 +3570,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Ooty</a></li>
-                                                            <!-- <li><a href="package-grid.html">Indonesia Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Ooty</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Indonesia Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3583,12 +3583,12 @@
                                                             and Culture.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Mecca</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Doha</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Mecca</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Doha</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3630,8 +3630,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Ooty</a></li>
-                                                            <!-- <li><a href="package-grid.html">Wayanad Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Ooty</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Wayanad Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3643,12 +3643,12 @@
                                                             Mystical Travel.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3690,8 +3690,8 @@
                                                             </path>
                                                         </svg>
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Ooty</a></li>
-                                                            <!-- <li><a href="package-grid.html">Japan Tour</a></li> -->
+                                                            <li><a href="{{route('packages')}}">Ooty</a></li>
+                                                            <!-- <li><a href="{{route('packages')}}">Japan Tour</a></li> -->
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3702,12 +3702,12 @@
                                                             Exploring Travels Outdoors.</a></h5>
                                                     <div class="location-area">
                                                         <ul class="location-list">
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Medina</a></li>
-                                                            <li><a href="package-grid.html">Riyadh</a></li>
-                                                            <li><a href="package-grid.html">Cairo</a></li>
-                                                            <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                            <li><a href="package-grid.html">Al Rayyan</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Medina</a></li>
+                                                            <li><a href="{{route('packages')}}">Riyadh</a></li>
+                                                            <li><a href="{{route('packages')}}">Cairo</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Wakrah</a></li>
+                                                            <li><a href="{{route('packages')}}">Al Rayyan</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -3746,7 +3746,7 @@
                                                 </path>
                                             </svg>
                                         </div>
-                                        <a href="package-grid.html" class="secondary-btn1">View All Package</a>
+                                        <a href="{{route('packages')}}" class="secondary-btn1">View All Package</a>
                                         <div class="slider-btn package-card-tab-next">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="9"
                                                 height="17" viewbox="0 0 9 17" fill="none">
@@ -3799,7 +3799,7 @@
                         <div class="banner2-content">
                             <span>Savings worldwide</span>
                             <h3>20% Off</h3>
-                            <a href="package-grid.html">Discover Great Deal</a>
+                            <a href="{{route('packages')}}">Discover Great Deal</a>
                         </div>
                     </div>
                 </div>
@@ -3813,7 +3813,7 @@
                             <div class="banner2-content-wrap">
                                 <div class="banner2-content">
                                     <span>Couple Tour</span>
-                                    <a href="package-grid.html">4 Days In Switzerland</a>
+                                    <a href="{{route('packages')}}">4 Days In Switzerland</a>
                                 </div>
                                 <div class="offer-batch">
                                     <span><strong>50%</strong> <br>Off</span>
@@ -3832,7 +3832,7 @@
                                         <h5>Enjoy <span>40%</span> Off</h5>
                                         <p>2 Country & 15 Location</p>
                                     </div>
-                                    <a href="package-grid.html" class="primary-btn1">Book Now</a>
+                                    <a href="{{route('packages')}}" class="primary-btn1">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -3848,7 +3848,7 @@
                             <h3>50% Off</h3>
                             <p>For Your First Book</p>
                         </div>
-                        <a href="package-grid.html" class="primary-btn1">Book Now</a>
+                        <a href="{{route('packages')}}" class="primary-btn1">Book Now</a>
                     </div>
                 </div>
             </div>

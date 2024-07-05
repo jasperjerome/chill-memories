@@ -11,7 +11,7 @@ class ApiController extends Controller
 {
     public function destinations()
     {
-        $data = Destination::get();
+        $data = Destination::with('packages')->get();
         return response()->json(['status'=>200,'data'=>$data]);
     }
 
