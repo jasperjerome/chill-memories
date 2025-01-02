@@ -5,6 +5,7 @@ namespace App\Http\Controllers\web;
 use App\Http\Controllers\Controller;
 use App\Models\Contactus;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ContactusController extends Controller
 {
@@ -24,6 +25,7 @@ class ContactusController extends Controller
         $data->mobile = $request->get('mobile');
         $data->email = $request->get('email');
         $data->address = $request->get('address');
+// return $request;
         $data->save();
 
         return redirect()->route('app.contact_us')->with('create', 'Data Created Successfully');
@@ -35,6 +37,7 @@ class ContactusController extends Controller
     }
 
     public function update(Request $request, $id) {
+        \Log::info($request->all());
         $data = Contactus::findOrFail($id);
 
         $data->mobile = $request->get('mobile');

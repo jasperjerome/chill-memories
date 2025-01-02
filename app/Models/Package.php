@@ -33,6 +33,16 @@ class Package extends Model
     public function bookings() {
         return $this->hasMany(Booking::class, 'package_id');
     }
+
+    public function getFeatureImgAttribute($value)
+    {
+        return $value != "" ? url('') . config('global.IMG_PATH') . '/assets/uploads/feature_imgs/' . $value : '';
+    }
+
+    public function getBreadcrumbImgAttribute($value)
+    {
+        return $value != "" ? url('') . config('global.IMG_PATH') . '/assets/uploads/breadcrumb_imgs/' . $value : '';
+    }
     
     // Accessor for images attribute (array of images)
     public function getImagesAttribute($value)

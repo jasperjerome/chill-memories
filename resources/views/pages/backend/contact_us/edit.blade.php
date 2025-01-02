@@ -18,7 +18,7 @@
                             <div class="col-md-6">
                                 <div class="form-inner mb-30">
                                     <label>Mobile</label>
-                                    <input type="text" name="Mobile" value="{{$data->mobile}}" placeholder="Mobile">
+                                    <input type="text" name="mobile" value="{{$data->mobile}}" placeholder="Mobile">
                                 </div>
                             </div>
                             <div class="col-md-6">

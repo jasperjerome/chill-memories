@@ -11,7 +11,7 @@
             </div>
             <div class="dashboard-profile-wrapper two">
                 <div class="dashboard-profile-tab-content">
-                    <form action="{{route('app.privacy_policy.store')}}" method="post" enctype="multipart/form-data"> 
+                    <form action="{{route('app.refund_policy.store')}}" method="post" enctype="multipart/form-data"> 
                         @csrf
                         <div class="row">
                             <div class="col-md-6">

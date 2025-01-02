@@ -10,7 +10,7 @@ class Contactus extends Model
     use HasFactory;
 
     protected $table = 'contact_us';
-    protected $filable = [
+    protected $fillable = [
         'mobile',
         'email',
         'address',

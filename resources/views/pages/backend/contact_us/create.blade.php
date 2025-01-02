@@ -17,7 +17,7 @@
                             <div class="col-md-6">
                                 <div class="form-inner mb-30">
                                     <label>Mobile</label>
-                                    <input type="text" name="Mobile" placeholder="Mobile">
+                                    <input type="text" name="mobile" placeholder="Mobile">
                                 </div>
                             </div>
                             <div class="col-md-6">

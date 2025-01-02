@@ -11,7 +11,7 @@
             </div>
             <div class="dashboard-profile-wrapper two">
                 <div class="dashboard-profile-tab-content">
-                    <form action="{{route('app.privacy_policy.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data"> 
+                    <form action="{{route('app.refund_policy.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data"> 
                         @method('put')
                         @csrf
                         <div class="row">
